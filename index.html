@@ -27,6 +27,37 @@
 <body>
 
   <!-- ═══════════════════════════════════════════
+       LOADING SCREEN
+       ─ Shows once on first visit, fades out
+         automatically after 2 seconds
+  ════════════════════════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg class="loader-star" width="52" height="52" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="16,2 19.9,12.3 31,12.3 22,18.7 25.4,29 16,22.7 6.6,29 10,18.7 1,12.3 12.1,12.3" fill="#d4a843"/>
+      </svg>
+      <p class="loader-name">Ken Andrei A. Batac</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR SPOTLIGHT
+       ─ Follows mouse, gold glow effect
+  ════════════════════════════════════════════ -->
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- ═══════════════════════════════════════════
+       BACK TO TOP BUTTON
+       ─ Appears after scrolling 400px
+  ════════════════════════════════════════════ -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ═══════════════════════════════════════════
        NAVIGATION
        ─ All links are anchor tags (#section)
        ─ They scroll to sections on the SAME page
@@ -93,7 +124,8 @@
       </h1>
 
       <p class="hero-headline">
-        Frontend Developer &amp; BSCS Student at Saint Louis University
+        <!-- Typing animation — words cycle automatically via script.js -->
+        <span id="typingText"></span><span class="typing-cursor">|</span>
       </p>
 
       <p class="hero-intro">

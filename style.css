@@ -132,8 +132,21 @@ nav {
   color: var(--gold);
   letter-spacing: 0.5px;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 .nav-logo:hover { color: var(--gold-hover); }
+
+/* Star icon inside nav logo */
+.nav-star {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px rgba(212,168,67,0.5));
+  transition: transform 0.3s ease;
+}
+.nav-logo:hover .nav-star {
+  transform: rotate(20deg) scale(1.15);
+}
 
 .nav-links {
   display: flex;
@@ -757,11 +770,7 @@ img.about-photo {
   gap: 2.5rem;
 }
 
-.skill-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+
 
 .skill-cat-title {
   font-size: 0.85rem;
@@ -1031,4 +1040,179 @@ footer span { color: var(--gold); }
   .hero-ctas { flex-direction: column; align-items: center; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
   .modal-gallery { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NEW FEATURES — Added in final polish pass
+════════════════════════════════════════════════════════════════ */
+
+
+/* ── FEATURE 1: LOADING SCREEN ── */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+}
+/* Fade out class added by JS */
+.loader-hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+/* Star spins once on load */
+.loader-star {
+  filter: drop-shadow(0 0 16px rgba(212, 168, 67, 0.6));
+  animation: loaderSpin 1s ease-out forwards,
+             loaderPulse 0.8s 0.8s ease-in-out forwards;
+}
+@keyframes loaderSpin {
+  from { transform: rotate(-180deg) scale(0.4); opacity: 0; }
+  to   { transform: rotate(0deg)   scale(1);   opacity: 1; }
+}
+@keyframes loaderPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.loader-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.5s ease both;
+}
+/* Progress bar under the name */
+.loader-bar {
+  width: 160px;
+  height: 2px;
+  background: rgba(212, 168, 67, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.4s 0.7s ease both;
+}
+.loader-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  animation: loadProgress 1.8s 0.7s ease forwards;
+}
+@keyframes loadProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+
+/* ── FEATURE 2: TYPING ANIMATION ── */
+/* Blinking cursor after the typed text */
+.typing-cursor {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+
+/* ── FEATURE 3: ACTIVE NAV HIGHLIGHT ── */
+/* Added by IntersectionObserver in script.js */
+.nav-links a.nav-active {
+  color: var(--gold) !important;
+}
+/* Subtle underline on active link */
+.nav-links a.nav-active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+  margin-top: 2px;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scaleX(0); }
+  to   { opacity: 1; transform: scaleX(1); }
+}
+
+
+/* ── FEATURE 4: BACK TO TOP BUTTON ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 998;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy, #0a0f1e);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(212, 168, 67, 0.35);
+  /* Hidden by default — shown via .visible class from JS */
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.back-to-top:hover {
+  background: var(--gold-hover, #f0c060);
+  transform: translateY(-3px);
+}
+
+
+/* ── FEATURE 5: CURSOR SPOTLIGHT ── */
+.cursor-spotlight {
+  pointer-events: none;       /* never blocks clicks */
+  position: fixed;
+  z-index: 0;                 /* behind everything */
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(212, 168, 67, 0.07) 0%,
+    rgba(212, 168, 67, 0.03) 40%,
+    transparent 70%
+  );
+  transition: opacity 0.4s ease;
+  opacity: 0;                 /* shown via JS mouseenter */
+}
+/* Slightly stronger in dark mode */
+[data-theme="dark"] .cursor-spotlight {
+  background: radial-gradient(
+    circle,
+    rgba(212, 168, 67, 0.09) 0%,
+    rgba(212, 168, 67, 0.04) 40%,
+    transparent 70%
+  );
+}
+/* Hide spotlight on touch/mobile */
+@media (hover: none) {
+  .cursor-spotlight { display: none; }
 }

@@ -40,7 +40,7 @@ const projects = [
     result:
       "A clean, zero-dependency to-do app that works entirely in the browser — no server, no database, no login required. Fast to load and easy to extend.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://todo-app-blue-tau.vercel.app",
+    liveUrl: "https://todo-app-kenandrei16.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/todo-app",
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     result:
       "A visually polished weather app UI that demonstrates API-driven design patterns. Swapping the mock data for real fetch() calls to OpenWeatherMap would make it fully production-ready.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://weather-app-jet-three-35.vercel.app",
+    liveUrl: "https://weather-app-kenandrei16.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/weather-app",
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     result:
       "A practical personal finance tool covering full CRUD — add, view, filter, and delete transactions — with a clean dashboard that gives an instant snapshot of financial health.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://expense-tracker-iota-orcin-16.vercel.app",
+    liveUrl: "https://expense-tracker-kenandrei16.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/expense-tracker",
   },
 ];
@@ -242,9 +242,8 @@ async function handleFormSubmit(event) {
     });
 
     if (response.ok) {
-      statusEl.textContent = "✓ Message sent! I'll get back to you soon.";
-      statusEl.classList.add('success');
-      form.reset();
+      // Redirect to thank you page instead of inline message
+      window.location.href = 'thankyou.html';
     } else {
       const data = await response.json();
       const msg  = (data.errors && data.errors.map(e => e.message).join(', '))
@@ -282,3 +281,175 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 });
+
+
+/* ─────────────────────────────────────────────
+   FEATURE 1 — LOADING SCREEN
+   ─ Shows a branded splash screen on first load
+   ─ Fades out after 2s, then removes itself
+   ─ Only runs once per session (sessionStorage)
+───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  // Hide after 2.2 seconds
+  setTimeout(() => {
+    loader.classList.add('loader-hide');
+    // Remove from DOM after fade finishes so it can't block clicks
+    setTimeout(() => loader.remove(), 600);
+  }, 2200);
+});
+
+
+/* ─────────────────────────────────────────────
+   FEATURE 2 — TYPING ANIMATION
+   ─ Cycles through words in the hero headline
+   ─ Types forward, pauses, deletes, then next
+───────────────────────────────────────────── */
+(function startTyping() {
+  // Words to cycle through
+  const words = [
+    'Frontend Developer',
+    'BSCS Student',
+    'UI Enthusiast',
+    'Problem Solver',
+  ];
+
+  const el     = document.getElementById('typingText');
+  if (!el) return;
+
+  let wordIndex   = 0;  // which word we're on
+  let charIndex   = 0;  // how many chars are typed so far
+  let isDeleting  = false;
+
+  function tick() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      // Type one character
+      el.textContent = currentWord.slice(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        // Finished typing — pause then start deleting
+        isDeleting = true;
+        setTimeout(tick, 1600); // pause at full word
+        return;
+      }
+      setTimeout(tick, 80); // typing speed
+
+    } else {
+      // Delete one character
+      el.textContent = currentWord.slice(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        // Finished deleting — move to next word
+        isDeleting = false;
+        wordIndex  = (wordIndex + 1) % words.length;
+        setTimeout(tick, 400); // pause before typing next word
+        return;
+      }
+      setTimeout(tick, 45); // deleting speed (faster than typing)
+    }
+  }
+
+  // Small initial delay before typing starts
+  setTimeout(tick, 1000);
+})();
+
+
+/* ─────────────────────────────────────────────
+   FEATURE 3 — ACTIVE NAV HIGHLIGHT
+   ─ Watches which section is on screen using
+     IntersectionObserver and highlights the
+     matching nav link in gold
+───────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Remove active from all links
+          navLinks.forEach(link => link.classList.remove('nav-active'));
+
+          // Add active to the matching link
+          const activeLink = document.querySelector(
+            `.nav-links a[href="#${entry.target.id}"]`
+          );
+          if (activeLink) activeLink.classList.add('nav-active');
+        }
+      });
+    },
+    {
+      // Trigger when section is 40% visible
+      threshold: 0.4,
+    }
+  );
+
+  sections.forEach(section => sectionObserver.observe(section));
+});
+
+
+/* ─────────────────────────────────────────────
+   FEATURE 4 — BACK TO TOP BUTTON
+   ─ Appears after scrolling 400px down
+   ─ Smooth scrolls back to top on click
+───────────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  // Show button after 400px scroll
+  btn.classList.toggle('visible', window.scrollY > 400);
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+/* ─────────────────────────────────────────────
+   FEATURE 5 — CURSOR SPOTLIGHT EFFECT
+   ─ A soft gold radial glow follows the cursor
+   ─ Disabled on touch/mobile devices
+───────────────────────────────────────────── */
+(function initCursorSpotlight() {
+  const spotlight = document.getElementById('cursorSpotlight');
+  if (!spotlight) return;
+
+  // Don't run on touch devices
+  if (window.matchMedia('(hover: none)').matches) {
+    spotlight.style.display = 'none';
+    return;
+  }
+
+  let mouseX = 0, mouseY = 0;   // actual mouse position
+  let spotX  = 0, spotY  = 0;   // smoothed position
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth lerp animation — spotlight trails behind cursor slightly
+  function animateSpotlight() {
+    // Lerp (linear interpolation) — moves 10% of distance per frame
+    spotX += (mouseX - spotX) * 0.1;
+    spotY += (mouseY - spotY) * 0.1;
+
+    spotlight.style.left = spotX + 'px';
+    spotlight.style.top  = spotY + 'px';
+
+    requestAnimationFrame(animateSpotlight);
+  }
+
+  animateSpotlight();
+
+  // Show spotlight only when mouse is over the page
+  document.addEventListener('mouseenter', () => spotlight.style.opacity = '1');
+  document.addEventListener('mouseleave', () => spotlight.style.opacity = '0');
+})();
