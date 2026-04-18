@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif">
+  <rect width="800" height="450" fill="#0d1117"/>
+  <rect x="140" y="30" width="520" height="390" rx="16" fill="#161b22" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+  <rect x="140" y="30" width="520" height="60" rx="16" fill="#0a0f1e"/>
+  <rect x="140" y="74" width="520" height="16" fill="#0a0f1e"/>
+  <text x="172" y="68" font-size="20" font-weight="700" fill="#d4a843">My Tasks</text>
+  <text x="172" y="84" font-size="11" fill="#8892a4">Wednesday, April 16, 2025</text>
+  <rect x="140" y="90" width="520" height="44" fill="#d4a843" fill-opacity=".05"/>
+  <text x="228" y="110" font-size="22" font-weight="700" fill="#d4a843" text-anchor="middle">8</text>
+  <text x="228" y="126" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">TOTAL</text>
+  <text x="400" y="110" font-size="22" font-weight="700" fill="#3fb950" text-anchor="middle">5</text>
+  <text x="400" y="126" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">DONE</text>
+  <text x="572" y="110" font-size="22" font-weight="700" fill="#f0c060" text-anchor="middle">3</text>
+  <text x="572" y="126" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">PENDING</text>
+  <rect x="162" y="148" width="298" height="34" rx="8" fill="#0d1117" stroke="#d4a843" stroke-opacity=".25" stroke-width="1"/>
+  <text x="178" y="169" font-size="12" fill="#4a5568">Add a new task...</text>
+  <rect x="468" y="148" width="76" height="34" rx="8" fill="#0d1117" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+  <text x="482" y="169" font-size="11" fill="#8892a4">Medium</text>
+  <rect x="552" y="148" width="76" height="34" rx="8" fill="#d4a843"/>
+  <text x="590" y="169" font-size="13" font-weight="700" fill="#0a0f1e" text-anchor="middle">Add</text>
+  <rect x="162" y="196" width="44" height="22" rx="11" fill="#d4a843" fill-opacity=".15" stroke="#d4a843" stroke-opacity=".4" stroke-width="1"/>
+  <text x="184" y="211" font-size="11" fill="#d4a843" text-anchor="middle">All</text>
+  <text x="230" y="211" font-size="11" fill="#8892a4">Pending</text>
+  <text x="294" y="211" font-size="11" fill="#8892a4">Done</text>
+  <circle cx="178" cy="244" r="9" fill="#d4a843"/>
+  <polyline points="173,244 177,249 184,239" fill="none" stroke="#0a0f1e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="193" cy="244" r="4" fill="#f85149"/>
+  <text x="204" y="249" font-size="13" fill="#4a5568" text-decoration="line-through">Buy groceries</text>
+  <circle cx="178" cy="272" r="9" fill="#d4a843"/>
+  <polyline points="173,272 177,277 184,267" fill="none" stroke="#0a0f1e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="193" cy="272" r="4" fill="#d4a843"/>
+  <text x="204" y="277" font-size="13" fill="#4a5568" text-decoration="line-through">Review lecture notes</text>
+  <circle cx="178" cy="300" r="9" fill="#d4a843"/>
+  <polyline points="173,300 177,305 184,295" fill="none" stroke="#0a0f1e" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="193" cy="300" r="4" fill="#3fb950"/>
+  <text x="204" y="305" font-size="13" fill="#4a5568" text-decoration="line-through">Morning run</text>
+  <circle cx="178" cy="328" r="9" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
+  <circle cx="193" cy="328" r="4" fill="#f85149"/>
+  <text x="204" y="333" font-size="13" fill="#e6edf3">Submit OJT application</text>
+  <circle cx="178" cy="356" r="9" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
+  <circle cx="193" cy="356" r="4" fill="#d4a843"/>
+  <text x="204" y="361" font-size="13" fill="#e6edf3">Finish portfolio website</text>
+  <circle cx="178" cy="384" r="9" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
+  <circle cx="193" cy="384" r="4" fill="#3fb950"/>
+  <text x="204" y="389" font-size="13" fill="#e6edf3">Study for finals exam</text>
+</svg>

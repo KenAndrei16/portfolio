@@ -1,84 +1,52 @@
-<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
-  <defs>
-    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#111827"/>
-    </linearGradient>
-    <linearGradient id="greenFill" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3fb950"/>
-      <stop offset="60%" stop-color="#d4a843"/>
-    </linearGradient>
-  </defs>
-  <rect width="900" height="280" fill="url(#bg3)"/>
-  <ellipse cx="450" cy="50" rx="400" ry="90" fill="#d4a843" fill-opacity="0.05"/>
-  <pattern id="g3" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.035"/>
-  </pattern>
-  <rect width="900" height="280" fill="url(#g3)"/>
-
-  <!-- Left: summary cards stack -->
-  <rect x="42" y="46" width="184" height="58" rx="12" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity="0.3"/>
-  <rect x="58" y="60" width="30" height="30" rx="7" fill="#3fb950" fill-opacity="0.12"/>
-  <text x="68" y="80" font-size="16" fill="#3fb950">↑</text>
-  <text x="96" y="68" font-size="9" fill="#8892a4">TOTAL INCOME</text>
-  <text x="96" y="86" font-size="15" font-weight="700" fill="#3fb950">₱ 15,000</text>
-
-  <rect x="42" y="114" width="184" height="58" rx="12" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.3"/>
-  <rect x="58" y="128" width="30" height="30" rx="7" fill="#f85149" fill-opacity="0.12"/>
-  <text x="68" y="148" font-size="16" fill="#f85149">↓</text>
-  <text x="96" y="136" font-size="9" fill="#8892a4">TOTAL EXPENSES</text>
-  <text x="96" y="154" font-size="15" font-weight="700" fill="#f85149">₱ 8,450</text>
-
-  <rect x="42" y="182" width="184" height="58" rx="12" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
-  <rect x="58" y="196" width="30" height="30" rx="7" fill="#d4a843" fill-opacity="0.12"/>
-  <text x="66" y="216" font-size="14">💳</text>
-  <text x="96" y="204" font-size="9" fill="#8892a4">BALANCE</text>
-  <text x="96" y="222" font-size="15" font-weight="700" fill="#d4a843">₱ 6,550</text>
-
-  <!-- Center title -->
-  <text x="450" y="104" font-size="12" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="3">PROJECT 03</text>
-  <text x="450" y="148" font-size="40" font-weight="900" fill="#e6edf3" text-anchor="middle" letter-spacing="-1">Expense Tracker</text>
-  <text x="450" y="178" font-size="14" fill="#8892a4" text-anchor="middle">Income &amp; Expenses · Categories · Progress Bar · CRUD</text>
-  <!-- tags -->
-  <rect x="334" y="196" width="68" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="368" y="211" font-size="11" fill="#d4a843" text-anchor="middle">HTML5</text>
-  <rect x="410" y="196" width="52" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="436" y="211" font-size="11" fill="#d4a843" text-anchor="middle">CSS3</text>
-  <rect x="470" y="196" width="86" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
-  <text x="513" y="211" font-size="11" fill="#d4a843" text-anchor="middle">JavaScript</text>
-
-  <!-- Right: progress bar + breakdown -->
-  <rect x="638" y="46" width="224" height="194" rx="14" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.15"/>
-  <text x="750" y="70" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">SPENDING PROGRESS</text>
-  <!-- bar -->
-  <rect x="654" y="78" width="192" height="8" rx="4" fill="#0d1117"/>
-  <rect x="654" y="78" width="108" height="8" rx="4" fill="url(#greenFill)"/>
-  <text x="750" y="100" font-size="10" fill="#8892a4" text-anchor="middle">56% of income spent</text>
-  <!-- breakdown -->
-  <text x="654" y="122" font-size="9" fill="#4a5568">🍜 food</text>
-  <rect x="700" y="114" width="96" height="5" rx="2.5" fill="#0d1117"/>
-  <rect x="700" y="114" width="96" height="5" rx="2.5" fill="#d4a843"/>
-  <text x="804" y="120" font-size="9" fill="#e6edf3" text-anchor="end">₱3,200</text>
-
-  <text x="654" y="140" font-size="9" fill="#4a5568">🚌 transport</text>
-  <rect x="700" y="132" width="96" height="5" rx="2.5" fill="#0d1117"/>
-  <rect x="700" y="132" width="54" height="5" rx="2.5" fill="#d4a843"/>
-  <text x="804" y="138" font-size="9" fill="#e6edf3" text-anchor="end">₱1,800</text>
-
-  <text x="654" y="158" font-size="9" fill="#4a5568">📚 school</text>
-  <rect x="700" y="150" width="96" height="5" rx="2.5" fill="#0d1117"/>
-  <rect x="700" y="150" width="34" height="5" rx="2.5" fill="#d4a843"/>
-  <text x="804" y="156" font-size="9" fill="#e6edf3" text-anchor="end">₱1,100</text>
-
-  <text x="654" y="176" font-size="9" fill="#4a5568">🛍 shopping</text>
-  <rect x="700" y="168" width="96" height="5" rx="2.5" fill="#0d1117"/>
-  <rect x="700" y="168" width="20" height="5" rx="2.5" fill="#d4a843"/>
-  <text x="804" y="174" font-size="9" fill="#e6edf3" text-anchor="end">₱640</text>
-
-  <text x="654" y="194" font-size="9" fill="#4a5568">💊 health</text>
-  <rect x="700" y="186" width="96" height="5" rx="2.5" fill="#0d1117"/>
-  <rect x="700" y="186" width="12" height="5" rx="2.5" fill="#d4a843"/>
-  <text x="804" y="192" font-size="9" fill="#e6edf3" text-anchor="end">₱310</text>
-
-  <rect x="0" y="268" width="900" height="12" fill="#d4a843" fill-opacity="0.05"/>
+<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif">
+  <rect width="900" height="280" fill="#0a0f1e"/>
+  <!-- left panel: summary -->
+  <rect x="30" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".18" stroke-width="1"/>
+  <rect x="44" y="58" width="192" height="44" rx="9" fill="#3fb950" fill-opacity=".08" stroke="#3fb950" stroke-opacity=".2" stroke-width="1"/>
+  <text x="60" y="73" font-size="9" fill="#8892a4">TOTAL INCOME</text>
+  <text x="60" y="91" font-size="15" font-weight="700" fill="#3fb950">₱ 15,000.00</text>
+  <rect x="44" y="110" width="192" height="44" rx="9" fill="#f85149" fill-opacity=".08" stroke="#f85149" stroke-opacity=".2" stroke-width="1"/>
+  <text x="60" y="125" font-size="9" fill="#8892a4">TOTAL EXPENSES</text>
+  <text x="60" y="143" font-size="15" font-weight="700" fill="#f85149">₱ 8,450.00</text>
+  <rect x="44" y="162" width="192" height="44" rx="9" fill="#d4a843" fill-opacity=".08" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+  <text x="60" y="177" font-size="9" fill="#8892a4">BALANCE</text>
+  <text x="60" y="195" font-size="15" font-weight="700" fill="#d4a843">₱ 6,550.00</text>
+  <!-- center -->
+  <text x="450" y="88"  font-size="11" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="4">PROJECT  03</text>
+  <text x="450" y="136" font-size="42" font-weight="900" fill="#e6edf3" text-anchor="middle" letter-spacing="-1">Expense Tracker</text>
+  <text x="450" y="162" font-size="13" fill="#8892a4" text-anchor="middle">Income &amp; Expenses · Categories · Progress Bar · CRUD</text>
+  <rect x="312" y="178" width="60" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
+  <text x="342" y="192" font-size="10" fill="#d4a843" text-anchor="middle">HTML5</text>
+  <rect x="380" y="178" width="50" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
+  <text x="405" y="192" font-size="10" fill="#d4a843" text-anchor="middle">CSS3</text>
+  <rect x="438" y="178" width="84" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
+  <text x="480" y="192" font-size="10" fill="#d4a843" text-anchor="middle">JavaScript</text>
+  <rect x="530" y="178" width="90" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
+  <text x="575" y="192" font-size="10" fill="#d4a843" text-anchor="middle">localStorage</text>
+  <!-- right panel: category breakdown -->
+  <rect x="650" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".15" stroke-width="1"/>
+  <text x="760" y="66" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">BY CATEGORY</text>
+  <text x="664" y="90" font-size="11" fill="#8892a4">🍜 food</text>
+  <rect x="718" y="82" width="136" height="7" rx="3" fill="#0d1117"/>
+  <rect x="718" y="82" width="136" height="7" rx="3" fill="#d4a843"/>
+  <text x="860" y="90" font-size="10" font-weight="600" fill="#e6edf3" text-anchor="end">₱3,200</text>
+  <text x="664" y="112" font-size="11" fill="#8892a4">🚌 transport</text>
+  <rect x="718" y="104" width="136" height="7" rx="3" fill="#0d1117"/>
+  <rect x="718" y="104" width="78" height="7" rx="3" fill="#d4a843"/>
+  <text x="860" y="112" font-size="10" font-weight="600" fill="#e6edf3" text-anchor="end">₱1,800</text>
+  <text x="664" y="134" font-size="11" fill="#8892a4">📚 school</text>
+  <rect x="718" y="126" width="136" height="7" rx="3" fill="#0d1117"/>
+  <rect x="718" y="126" width="50" height="7" rx="3" fill="#d4a843"/>
+  <text x="860" y="134" font-size="10" font-weight="600" fill="#e6edf3" text-anchor="end">₱1,100</text>
+  <text x="664" y="156" font-size="11" fill="#8892a4">🛍 shopping</text>
+  <rect x="718" y="148" width="136" height="7" rx="3" fill="#0d1117"/>
+  <rect x="718" y="148" width="30" height="7" rx="3" fill="#d4a843"/>
+  <text x="860" y="156" font-size="10" font-weight="600" fill="#e6edf3" text-anchor="end">₱640</text>
+  <text x="664" y="178" font-size="11" fill="#8892a4">💊 health</text>
+  <rect x="718" y="170" width="136" height="7" rx="3" fill="#0d1117"/>
+  <rect x="718" y="170" width="16" height="7" rx="3" fill="#d4a843"/>
+  <text x="860" y="178" font-size="10" font-weight="600" fill="#e6edf3" text-anchor="end">₱310</text>
+  <rect x="660" y="190" width="200" height="1" fill="#ffffff" fill-opacity=".06"/>
+  <text x="760" y="210" font-size="11" font-weight="700" fill="#d4a843" text-anchor="middle">56% of income spent</text>
+  <rect x="0" y="270" width="900" height="10" fill="#d4a843" fill-opacity=".06"/>
 </svg>
