@@ -40,7 +40,7 @@ const projects = [
     result:
       "A clean, zero-dependency to-do app that works entirely in the browser — no server, no database, no login required. Fast to load and easy to extend.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://todo-app-kenandrei16.vercel.app",
+    liveUrl: "https://todo-app-blue-tau.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/todo-app",
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     result:
       "A visually polished weather app UI that demonstrates API-driven design patterns. Swapping the mock data for real fetch() calls to OpenWeatherMap would make it fully production-ready.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://weather-app-kenandrei16.vercel.app",
+    liveUrl: "https://weather-app-jet-three-35.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/weather-app",
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     result:
       "A practical personal finance tool covering full CRUD — add, view, filter, and delete transactions — with a clean dashboard that gives an instant snapshot of financial health.",
     // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://expense-tracker-kenandrei16.vercel.app",
+    liveUrl: "https://expense-tracker-iota-orcin-16.vercel.app",
     repoUrl: "https://github.com/KenAndrei16/expense-tracker",
   },
 ];
