@@ -1,0 +1,79 @@
+<svg viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <rect width="560" height="440" fill="#0d1117"/>
+
+  <!-- Header -->
+  <rect x="20" y="16" width="520" height="54" rx="12" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="44" y="40" font-size="16" font-weight="700" fill="#d4a843">Expense Tracker</text>
+  <text x="44" y="56" font-size="10" fill="#8892a4">April 2026</text>
+
+  <!-- Summary compact -->
+  <rect x="20" y="82" width="158" height="42" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity="0.22"/>
+  <text x="50" y="97" font-size="9" fill="#8892a4">INCOME</text>
+  <text x="50" y="113" font-size="13" font-weight="700" fill="#3fb950">₱ 15,000.00</text>
+  <rect x="190" y="82" width="170" height="42" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.22"/>
+  <text x="220" y="97" font-size="9" fill="#8892a4">EXPENSES</text>
+  <text x="220" y="113" font-size="13" font-weight="700" fill="#f85149">₱ 8,450.00</text>
+  <rect x="372" y="82" width="168" height="42" rx="10" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.22"/>
+  <text x="402" y="97" font-size="9" fill="#8892a4">BALANCE</text>
+  <text x="402" y="113" font-size="13" font-weight="700" fill="#d4a843">₱ 6,550.00</text>
+
+  <!-- Progress -->
+  <rect x="20" y="136" width="520" height="34" rx="10" fill="#161b22" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05"/>
+  <rect x="36" y="154" width="488" height="7" rx="3.5" fill="#0d1117"/>
+  <rect x="36" y="154" width="273" height="7" rx="3.5" fill="#3fb950"/>
+  <text x="504" y="150" font-size="10" fill="#8892a4" text-anchor="end">56% of income</text>
+
+  <!-- Transaction history with EXPENSE filter active -->
+  <rect x="20" y="182" width="520" height="240" rx="12" fill="#161b22" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05"/>
+  <text x="38" y="204" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">HISTORY</text>
+
+  <!-- filter tabs -->
+  <text x="270" y="204" font-size="10" fill="#8892a4">All</text>
+  <rect x="298" y="192" width="68" height="18" rx="9" fill="#f85149" fill-opacity="0.15" stroke="#f85149" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="332" y="205" font-size="10" fill="#f85149" text-anchor="middle">Expenses</text>
+  <text x="378" y="204" font-size="10" fill="#8892a4">Income</text>
+
+  <!-- Only expense rows -->
+  <rect x="30" y="214" width="500" height="30" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="233" font-size="15">🍜</text>
+  <text x="66" y="228" font-size="11" font-weight="500" fill="#e6edf3">Jollibee lunch</text>
+  <text x="66" y="240" font-size="9" fill="#4a5568">Apr 18 · food</text>
+  <text x="522" y="233" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱220.00</text>
+  <!-- x button -->
+  <circle cx="536" cy="229" r="8" fill="#f85149" fill-opacity="0.1"/>
+  <text x="536" y="233" font-size="10" fill="#f85149" text-anchor="middle">✕</text>
+
+  <rect x="30" y="248" width="500" height="30" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="267" font-size="15">🚌</text>
+  <text x="66" y="262" font-size="11" font-weight="500" fill="#e6edf3">Jeepney fare x2</text>
+  <text x="66" y="274" font-size="9" fill="#4a5568">Apr 17 · transport</text>
+  <text x="522" y="267" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱50.00</text>
+  <circle cx="536" cy="263" r="8" fill="#f85149" fill-opacity="0.1"/>
+  <text x="536" y="267" font-size="10" fill="#f85149" text-anchor="middle">✕</text>
+
+  <rect x="30" y="282" width="500" height="30" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="301" font-size="15">📚</text>
+  <text x="66" y="296" font-size="11" font-weight="500" fill="#e6edf3">Photocopy notes</text>
+  <text x="66" y="308" font-size="9" fill="#4a5568">Apr 16 · school</text>
+  <text x="522" y="301" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱80.00</text>
+  <circle cx="536" cy="297" r="8" fill="#f85149" fill-opacity="0.1"/>
+  <text x="536" y="301" font-size="10" fill="#f85149" text-anchor="middle">✕</text>
+
+  <rect x="30" y="316" width="500" height="30" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="335" font-size="15">🛍</text>
+  <text x="66" y="330" font-size="11" font-weight="500" fill="#e6edf3">SM new shirt</text>
+  <text x="66" y="342" font-size="9" fill="#4a5568">Apr 15 · shopping</text>
+  <text x="522" y="335" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱350.00</text>
+  <circle cx="536" cy="331" r="8" fill="#f85149" fill-opacity="0.1"/>
+  <text x="536" y="335" font-size="10" fill="#f85149" text-anchor="middle">✕</text>
+
+  <rect x="30" y="350" width="500" height="30" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="369" font-size="15">💊</text>
+  <text x="66" y="364" font-size="11" font-weight="500" fill="#e6edf3">Medicine</text>
+  <text x="66" y="376" font-size="9" fill="#4a5568">Apr 14 · health</text>
+  <text x="522" y="369" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱150.00</text>
+  <circle cx="536" cy="365" r="8" fill="#f85149" fill-opacity="0.1"/>
+  <text x="536" y="369" font-size="10" fill="#f85149" text-anchor="middle">✕</text>
+
+  <text x="280" y="432" font-size="10" fill="#4a5568" text-anchor="middle">Screenshot 3 — Expenses-only filter, delete buttons visible</text>
+</svg>

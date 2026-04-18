@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List — Ken Andrei</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- ── APP HEADER ── -->
+    <header class="app-header">
+      <h1 class="app-title">My Tasks</h1>
+      <p class="app-subtitle" id="dateDisplay"></p>
+    </header>
+
+    <!-- ── STATS BAR ── -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-num" id="totalCount">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="doneCount">0</span>
+        <span class="stat-label">Done</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" id="pendingCount">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+    </div>
+
+    <!-- ── ADD TASK FORM ── -->
+    <div class="add-task-form">
+      <input
+        type="text"
+        id="taskInput"
+        class="task-input"
+        placeholder="Add a new task..."
+        maxlength="100"
+        autocomplete="off"
+      />
+      <select id="prioritySelect" class="priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn" class="btn-add" onclick="addTask()">Add</button>
+    </div>
+
+    <!-- ── FILTER TABS ── -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setFilter('pending', this)">Pending</button>
+      <button class="filter-btn" onclick="setFilter('done', this)">Done</button>
+    </div>
+
+    <!-- ── TASK LIST ── -->
+    <ul class="task-list" id="taskList"></ul>
+
+    <!-- ── EMPTY STATE ── -->
+    <div class="empty-state" id="emptyState">
+      <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+      </svg>
+      <p>No tasks here. Add one above!</p>
+    </div>
+
+    <!-- ── CLEAR COMPLETED ── -->
+    <div class="bottom-bar">
+      <button class="btn-clear" onclick="clearCompleted()">Clear Completed</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

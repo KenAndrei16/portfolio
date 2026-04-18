@@ -1,0 +1,76 @@
+<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#1a2236"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a843" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#d4a843" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="280" fill="url(#bg)"/>
+  <!-- Glow blob -->
+  <ellipse cx="450" cy="60" rx="380" ry="80" fill="url(#glow)"/>
+  <!-- Subtle grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.04"/>
+  </pattern>
+  <rect width="900" height="280" fill="url(#grid)"/>
+
+  <!-- Left: decorative task list mockup -->
+  <rect x="60" y="60" width="260" height="170" rx="14" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.2"/>
+  <!-- header -->
+  <rect x="60" y="60" width="260" height="44" rx="14" fill="#0a0f1e"/>
+  <rect x="60" y="90" width="260" height="14" fill="#0a0f1e"/>
+  <text x="84" y="88" font-size="15" font-weight="700" fill="#d4a843">My Tasks</text>
+  <!-- tasks -->
+  <circle cx="84" cy="120" r="7" fill="#d4a843"/>
+  <polyline points="80,120 83,124 89,115" fill="none" stroke="#0a0f1e" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="94" cy="120" r="3" fill="#f85149"/>
+  <line x1="102" y1="120" x2="290" y2="120" stroke="#4a5568" stroke-width="1" stroke-opacity="0.6"/>
+  <text x="103" y="124" font-size="11" fill="#4a5568" text-decoration="line-through">Submit assignment</text>
+
+  <circle cx="84" cy="144" r="7" fill="#d4a843"/>
+  <polyline points="80,144 83,148 89,139" fill="none" stroke="#0a0f1e" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="94" cy="144" r="3" fill="#d4a843"/>
+  <text x="103" y="148" font-size="11" fill="#4a5568" text-decoration="line-through">Review lecture notes</text>
+
+  <circle cx="84" cy="168" r="7" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="94" cy="168" r="3" fill="#f85149"/>
+  <text x="103" y="172" font-size="11" fill="#e6edf3">Submit OJT application</text>
+
+  <circle cx="84" cy="192" r="7" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="94" cy="192" r="3" fill="#3fb950"/>
+  <text x="103" y="196" font-size="11" fill="#e6edf3">Finish portfolio website</text>
+
+  <!-- Center: Big title -->
+  <text x="450" y="108" font-size="13" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="3">PROJECT 01</text>
+  <text x="450" y="150" font-size="40" font-weight="900" fill="#e6edf3" text-anchor="middle" letter-spacing="-1">To-Do List App</text>
+  <text x="450" y="180" font-size="14" fill="#8892a4" text-anchor="middle">Vanilla JS · localStorage · Priority Levels · Filter Tabs</text>
+
+  <!-- Pill tags -->
+  <rect x="340" y="200" width="68" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="374" y="215" font-size="11" fill="#d4a843" text-anchor="middle">HTML5</text>
+  <rect x="416" y="200" width="52" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="442" y="215" font-size="11" fill="#d4a843" text-anchor="middle">CSS3</text>
+  <rect x="476" y="200" width="86" height="22" rx="11" fill="#d4a843" fill-opacity="0.12" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="519" y="215" font-size="11" fill="#d4a843" text-anchor="middle">JavaScript</text>
+
+  <!-- Right: Stats -->
+  <rect x="590" y="70" width="250" height="150" rx="14" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.15"/>
+  <text x="715" y="100" font-size="10" fill="#8892a4" text-anchor="middle" letter-spacing="1">TASK STATS</text>
+  <text x="650" y="140" font-size="36" font-weight="900" fill="#d4a843" text-anchor="middle">8</text>
+  <text x="650" y="158" font-size="10" fill="#8892a4" text-anchor="middle">TOTAL</text>
+  <line x1="680" y1="118" x2="680" y2="168" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+  <text x="720" y="132" font-size="28" font-weight="900" fill="#3fb950" text-anchor="middle">5</text>
+  <text x="720" y="148" font-size="10" fill="#8892a4" text-anchor="middle">DONE</text>
+  <text x="720" y="162" font-size="10" fill="#3fb950" text-anchor="middle">62%</text>
+  <line x1="754" y1="118" x2="754" y2="168" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+  <text x="790" y="132" font-size="28" font-weight="900" fill="#f0c060" text-anchor="middle">3</text>
+  <text x="790" y="148" font-size="10" fill="#8892a4" text-anchor="middle">PENDING</text>
+
+  <!-- bottom line -->
+  <rect x="0" y="268" width="900" height="12" fill="#d4a843" fill-opacity="0.06"/>
+</svg>

@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════
+   style.css — To-Do List App
+   Clean navy + gold theme, fully responsive
+════════════════════════════════════════════ */
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0d1117;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #e6edf3;
+}
+
+/* ── APP WRAPPER ── */
+.app-wrapper {
+  width: 100%;
+  max-width: 540px;
+  background: #161b22;
+  border: 1px solid rgba(212, 168, 67, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+
+/* ── HEADER ── */
+.app-header {
+  background: linear-gradient(135deg, #0a0f1e, #1a2236);
+  padding: 2rem 1.75rem 1.5rem;
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+}
+.app-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d4a843;
+  letter-spacing: -0.02em;
+}
+.app-subtitle {
+  font-size: 0.82rem;
+  color: #8892a4;
+  margin-top: 0.2rem;
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  display: flex;
+  padding: 1rem 1.75rem;
+  gap: 2rem;
+  background: rgba(212,168,67,0.04);
+  border-bottom: 1px solid rgba(212,168,67,0.1);
+}
+.stat { display: flex; flex-direction: column; align-items: center; }
+.stat-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #d4a843;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.7rem;
+  color: #8892a4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
+}
+
+/* ── ADD FORM ── */
+.add-task-form {
+  display: flex;
+  gap: 0.6rem;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.task-input {
+  flex: 1;
+  background: #0d1117;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  color: #e6edf3;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.task-input:focus { border-color: #d4a843; }
+.task-input::placeholder { color: #4a5568; }
+
+.priority-select {
+  background: #0d1117;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 8px;
+  padding: 0.7rem 0.6rem;
+  color: #8892a4;
+  font-size: 0.82rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-add {
+  background: #d4a843;
+  color: #0a0f1e;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  font-family: inherit;
+}
+.btn-add:hover { background: #f0c060; transform: translateY(-1px); }
+.btn-add:active { transform: translateY(0); }
+
+/* ── FILTER TABS ── */
+.filter-tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.85rem 1.75rem;
+  background: #0d1117;
+}
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #8892a4;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.filter-btn:hover { color: #d4a843; }
+.filter-btn.active {
+  background: rgba(212,168,67,0.12);
+  border-color: rgba(212,168,67,0.3);
+  color: #d4a843;
+}
+
+/* ── TASK LIST ── */
+.task-list {
+  list-style: none;
+  padding: 0.5rem 1.75rem;
+  min-height: 80px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+.task-list::-webkit-scrollbar { width: 4px; }
+.task-list::-webkit-scrollbar-thumb { background: #d4a843; border-radius: 2px; }
+
+/* ── TASK ITEM ── */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  animation: slideIn 0.2s ease;
+}
+.task-item:last-child { border-bottom: none; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Custom checkbox */
+.task-check {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(212,168,67,0.4);
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.task-check:hover { border-color: #d4a843; }
+.task-check.checked {
+  background: #d4a843;
+  border-color: #d4a843;
+}
+.task-check.checked::after {
+  content: '';
+  width: 5px; height: 9px;
+  border: 2px solid #0a0f1e;
+  border-top: none; border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+/* Priority dot */
+.priority-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.priority-dot.low    { background: #3fb950; }
+.priority-dot.medium { background: #d4a843; }
+.priority-dot.high   { background: #f85149; }
+
+/* Task text */
+.task-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #e6edf3;
+  transition: color 0.2s;
+  word-break: break-word;
+}
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #4a5568;
+}
+
+/* Delete button */
+.task-delete {
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: flex; align-items: center;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+.task-delete:hover {
+  color: #f85149;
+  background: rgba(248,81,73,0.1);
+}
+
+/* ── EMPTY STATE ── */
+.empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1.75rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.empty-state.show { display: flex; }
+
+/* ── BOTTOM BAR ── */
+.bottom-bar {
+  padding: 1rem 1.75rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-clear {
+  background: transparent;
+  border: 1px solid rgba(248,81,73,0.3);
+  border-radius: 7px;
+  color: #f85149;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+.btn-clear:hover { background: rgba(248,81,73,0.1); border-color: #f85149; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .add-task-form { flex-wrap: wrap; }
+  .task-input { width: 100%; }
+}

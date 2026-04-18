@@ -1,0 +1,279 @@
+/* ═══════════════════════════════════════════
+   style.css — Weather App UI
+   Navy + Gold theme, dynamic bg classes
+════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0d1117;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #e6edf3;
+}
+
+/* ── WRAPPER ── */
+.app-wrapper {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── SEARCH BAR ── */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #161b22;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+}
+.search-icon { color: #8892a4; flex-shrink: 0; }
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e6edf3;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+.search-input::placeholder { color: #4a5568; }
+.search-btn {
+  background: #d4a843;
+  color: #0a0f1e;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+.search-btn:hover { background: #f0c060; }
+
+/* ── QUICK CITIES ── */
+.quick-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.city-chip {
+  background: rgba(212,168,67,0.08);
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 100px;
+  color: #d4a843;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.3rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: inherit;
+}
+.city-chip:hover {
+  background: rgba(212,168,67,0.18);
+  border-color: #d4a843;
+}
+
+/* ── WEATHER CARD ── */
+.weather-card {
+  background: #161b22;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.weather-card:hover { border-color: rgba(212,168,67,0.4); }
+
+/* Dynamic background accent based on condition */
+.weather-card.bg-sunny  { background: linear-gradient(160deg, #1a2010 0%, #161b22 40%); }
+.weather-card.bg-cloudy { background: linear-gradient(160deg, #111827 0%, #161b22 40%); }
+.weather-card.bg-rainy  { background: linear-gradient(160deg, #0d1829 0%, #161b22 40%); }
+
+/* ── TOP ROW ── */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.75rem 1.75rem 0.5rem;
+}
+.city-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6edf3;
+}
+.country {
+  font-size: 0.82rem;
+  color: #8892a4;
+  margin-top: 0.15rem;
+}
+.local-time {
+  font-size: 0.78rem;
+  color: #4a5568;
+  margin-top: 0.3rem;
+}
+.weather-icon-wrap { text-align: right; }
+.weather-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.weather-desc {
+  font-size: 0.78rem;
+  color: #8892a4;
+  text-transform: capitalize;
+  margin-top: 0.25rem;
+}
+
+/* ── TEMPERATURE ── */
+.temp-display {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 1.75rem 1.25rem;
+}
+.temp-main {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #d4a843;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.temp-unit-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+.unit-btn {
+  background: transparent;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 6px;
+  color: #8892a4;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.unit-btn.active {
+  background: rgba(212,168,67,0.15);
+  border-color: #d4a843;
+  color: #d4a843;
+}
+
+/* ── DETAIL GRID ── */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 0.5rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: #8892a4;
+}
+.detail-item:nth-child(3n) { border-right: none; }
+.detail-item:nth-child(n+4) { border-bottom: none; }
+.detail-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #4a5568;
+}
+.detail-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+/* ── FORECAST ── */
+.forecast-section {
+  padding: 1.25rem 1.75rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.forecast-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #d4a843;
+  margin-bottom: 1rem;
+}
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.forecast-day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 0.65rem 0.25rem;
+  transition: border-color 0.2s;
+}
+.forecast-day:hover { border-color: rgba(212,168,67,0.3); }
+.forecast-day-name {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #8892a4;
+  text-transform: uppercase;
+}
+.forecast-icon { font-size: 1.3rem; }
+.forecast-high {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e6edf3;
+}
+.forecast-low {
+  font-size: 0.72rem;
+  color: #4a5568;
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+  font-size: 0.72rem;
+  color: #4a5568;
+  text-align: center;
+  padding: 0 0.5rem;
+  line-height: 1.5;
+}
+.disclaimer a { color: #d4a843; }
+
+/* ── NOT FOUND MESSAGE ── */
+.not-found {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #8892a4;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 420px) {
+  .detail-grid { grid-template-columns: repeat(2, 1fr); }
+  .detail-item:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.06); }
+  .detail-item:nth-child(2n) { border-right: none; }
+}

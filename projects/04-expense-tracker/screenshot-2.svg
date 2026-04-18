@@ -1,0 +1,76 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="dangerProgress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a843"/>
+      <stop offset="100%" stop-color="#f85149"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="420" fill="#0d1117"/>
+
+  <!-- Header -->
+  <rect x="20" y="16" width="520" height="54" rx="12" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="44" y="40" font-size="16" font-weight="700" fill="#d4a843">Expense Tracker</text>
+  <text x="44" y="56" font-size="10" fill="#8892a4">April 2026</text>
+
+  <!-- Summary -->
+  <rect x="20"  y="82" width="158" height="48" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity="0.22"/>
+  <text x="50" y="100" font-size="9" fill="#8892a4">TOTAL INCOME</text>
+  <text x="50" y="118" font-size="14" font-weight="700" fill="#3fb950">₱ 15,000.00</text>
+
+  <rect x="190" y="82" width="170" height="48" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.22"/>
+  <text x="220" y="100" font-size="9" fill="#8892a4">TOTAL EXPENSES</text>
+  <text x="220" y="118" font-size="14" font-weight="700" fill="#f85149">₱ 13,100.00</text>
+
+  <rect x="372" y="82" width="168" height="48" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="402" y="100" font-size="9" fill="#8892a4">BALANCE</text>
+  <text x="402" y="118" font-size="14" font-weight="700" fill="#f85149">₱ 1,900.00</text>
+
+  <!-- Progress bar — DANGER (87%) -->
+  <rect x="20" y="142" width="520" height="38" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="36" y="158" font-size="10" fill="#8892a4">Spent</text>
+  <text x="504" y="158" font-size="10" fill="#f85149" text-anchor="end" font-weight="600">87% of income ⚠</text>
+  <rect x="36" y="164" width="488" height="7" rx="3.5" fill="#0d1117"/>
+  <rect x="36" y="164" width="425" height="7" rx="3.5" fill="url(#dangerProgress)"/>
+
+  <!-- Category breakdown -->
+  <rect x="20" y="192" width="520" height="210" rx="12" fill="#161b22" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05"/>
+  <text x="38" y="214" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">BY CATEGORY</text>
+
+  <!-- food -->
+  <text x="38" y="236" font-size="12" fill="#8892a4">🍜 food</text>
+  <rect x="130" y="227" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="227" width="300" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="237" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱5,200.00</text>
+
+  <!-- transport -->
+  <text x="38" y="260" font-size="12" fill="#8892a4">🚌 transport</text>
+  <rect x="130" y="251" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="251" width="170" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="261" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱2,900.00</text>
+
+  <!-- school -->
+  <text x="38" y="284" font-size="12" fill="#8892a4">📚 school</text>
+  <rect x="130" y="275" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="275" width="110" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="285" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱1,900.00</text>
+
+  <!-- shopping -->
+  <text x="38" y="308" font-size="12" fill="#8892a4">🛍 shopping</text>
+  <rect x="130" y="299" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="299" width="70" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="309" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱1,200.00</text>
+
+  <!-- health -->
+  <text x="38" y="332" font-size="12" fill="#8892a4">💊 health</text>
+  <rect x="130" y="323" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="323" width="40" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="333" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱600.00</text>
+
+  <!-- other -->
+  <text x="38" y="356" font-size="12" fill="#8892a4">📦 other</text>
+  <rect x="130" y="347" width="300" height="8" rx="4" fill="#0d1117"/>
+  <rect x="130" y="347" width="18" height="8" rx="4" fill="#d4a843"/>
+  <text x="440" y="357" font-size="11" font-weight="600" fill="#e6edf3" text-anchor="end">₱300.00</text>
+
+  <text x="280" y="412" font-size="10" fill="#4a5568" text-anchor="middle">Screenshot 2 — Category breakdown with danger spending bar</text>
+</svg>

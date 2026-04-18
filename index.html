@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>★ Ken Andrei A. Batac — Frontend Developer</title>
+
+  <!--
+    ╔══════════════════════════════════════════╗
+    ║  FAVICON (browser tab icon)              ║
+    ║  This inline SVG star shows in the tab.  ║
+    ║  To use a real .ico or .png favicon:     ║
+    ║  1. Create a 32x32 icon file             ║
+    ║  2. Replace the <link rel="icon"...>     ║
+    ║     below with:                          ║
+    ║     <link rel="icon" type="image/png"    ║
+    ║           href="favicon.png" />          ║
+    ╚══════════════════════════════════════════╝
+  -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 19.9,12.3 31,12.3 22,18.7 25.4,29 16,22.7 6.6,29 10,18.7 1,12.3 12.1,12.3' fill='%23d4a843'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Playfair Display for headings, Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+       ─ All links are anchor tags (#section)
+       ─ They scroll to sections on the SAME page
+       ─ Dark/Light toggle button is here
+  ════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <!-- Gold star before your initials -->
+      <svg class="nav-star" width="16" height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="16,2 19.9,12.3 31,12.3 22,18.7 25.4,29 16,22.7 6.6,29 10,18.7 1,12.3 12.1,12.3" fill="#d4a843"/>
+      </svg>
+      KAB.
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     onclick="closeNav()">Home</a></li>
+      <li><a href="#about"    onclick="closeNav()">About</a></li>
+      <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+      <li><a href="#skills"   onclick="closeNav()">Skills</a></li>
+      <li><a href="#contact"  onclick="closeNav()">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Dark / Light Mode Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <!-- Moon icon (shown in dark mode) -->
+        <svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun icon (shown in light mode) -->
+        <svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <div class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Available for OJT · Baguio City</div>
+
+      <h1 class="hero-name">
+        Ken Andrei<br><span>A. Batac</span>
+      </h1>
+
+      <p class="hero-headline">
+        Frontend Developer &amp; BSCS Student at Saint Louis University
+      </p>
+
+      <p class="hero-intro">
+        I craft clean, responsive, and intuitive web experiences.
+        Passionate about turning ideas into polished digital products — one pixel at a time.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">
+          View My Work
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <!-- LEFT: Photo -->
+        <div class="about-photo-wrap reveal">
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  PROFILE PHOTO — REPLACE THIS SECTION    ║
+            ║                                          ║
+            ║  To add your photo:                      ║
+            ║  1. Place your image file in the same    ║
+            ║     folder (e.g., profile.jpg)           ║
+            ║  2. Delete the entire <div class=        ║
+            ║     "about-photo"> block below           ║
+            ║  3. Replace it with:                     ║
+            ║     <img src="profile.jpg"               ║
+            ║          alt="Ken Andrei A. Batac"       ║
+            ║          class="about-photo" />          ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <img src="Profile.jpg"               ║
+            ║          alt="Ken Andrei A. Batac"       ║
+            ║          class="about-photo" /> 
+          <!-- End photo placeholder -->
+
+          <div class="photo-badge">3rd Year<br>BSCS Student</div>
+        </div>
+
+        <!-- RIGHT: Bio & Values -->
+        <div class="reveal" style="transition-delay:.15s">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Driven by <em>design</em>,<br>powered by code.</h2>
+          <div class="section-divider"></div>
+
+          <p class="about-bio">
+            Hi! I'm Ken Andrei A. Batac, a 3rd year Bachelor of Science in Computer Science
+            student at Saint Louis University in Baguio City. I have a solid foundation in
+            front-end development and software fundamentals, with a keen eye for building
+            responsive, user-friendly web interfaces using modern technologies.
+          </p>
+          <p class="about-bio" style="margin-top: .25rem;">
+            I thrive at the intersection of design and technology, and I'm eager to gain
+            hands-on experience through an OJT opportunity where I can contribute to real-world
+            projects, strengthen my development skills, and grow as a developer in a
+            collaborative environment.
+          </p>
+
+          <!-- Working style / values cards -->
+          <div class="about-values">
+            <div class="value-card">
+              <h4>Clean Code</h4>
+              <p>I write readable, well-structured code that's easy to maintain and scale.</p>
+            </div>
+            <div class="value-card">
+              <h4>Detail-Oriented</h4>
+              <p>Every pixel matters. I care about the small things that make great UX.</p>
+            </div>
+            <div class="value-card">
+              <h4>Fast Learner</h4>
+              <p>I embrace new tools and concepts quickly — adaptability is my strength.</p>
+            </div>
+            <div class="value-card">
+              <h4>Collaborative</h4>
+              <p>I communicate openly and work well within diverse development teams.</p>
+            </div>
+          </div>
+
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  RESUME DOWNLOAD BUTTON                  ║
+            ║                                          ║
+            ║  To link your actual resume:             ║
+            ║  1. Place your PDF in the same folder    ║
+            ║     (e.g., Ken_Andrei_Batac_Resume.pdf)  ║
+            ║  2. Replace href="#" with:               ║
+            ║     href="Ken_Andrei_Batac_Resume.pdf"   ║
+            ║  3. The `download` attribute triggers    ║
+            ║     a file download instead of opening   ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <a href="Ken_Andrei_Batac_Resume.pdf" download class="btn-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 15V3m0 12l-4-4m4 4l4-4M3 21h18"/>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">My Work</div>
+        <h2 class="section-title">Selected <em>Projects</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── PROJECT CARD 1 : To-Do List App ── -->
+        <div class="project-card reveal">
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  PROJECT 1 COVER IMAGE                   ║
+            ║  Currently using: preview.svg            ║
+            ║  To use a real screenshot instead:       ║
+            ║  1. Take a screenshot, save as           ║
+            ║     projects/01-todo-app/preview.png     ║
+            ║  2. Change the src below to preview.png  ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <img src="projects/01-todo-app/preview.png"
+               alt="To-Do List App preview"
+               class="project-cover-img" />
+
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">localStorage</span>
+            </div>
+            <h3 class="project-title">To-Do List App</h3>
+            <p class="project-desc">
+              A fully client-side task manager with priority levels, filter tabs, and a live
+              stats counter. Tasks persist across sessions using localStorage — no backend needed.
+            </p>
+            <button class="btn-ghost" onclick="openModal(0)">
+              View Project
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── PROJECT CARD 2 : Weather App UI ── -->
+        <div class="project-card reveal" style="transition-delay:.1s">
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  PROJECT 2 COVER IMAGE                   ║
+            ║  Currently using: preview.svg            ║
+            ║  To use a real screenshot instead:       ║
+            ║  1. Take a screenshot, save as           ║
+            ║     projects/02-weather-app/preview.png  ║
+            ║  2. Change the src below to preview.png  ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <img src="projects/02-weather-app/preview.png"
+               alt="Weather App UI preview"
+               class="project-cover-img" />
+
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Mock API</span>
+            </div>
+            <h3 class="project-title">Weather App UI</h3>
+            <p class="project-desc">
+              A weather dashboard with city search, 5-day forecast, °C/°F toggle, and a live
+              clock. Uses structured mock data that mirrors a real OpenWeatherMap API response.
+            </p>
+            <button class="btn-ghost" onclick="openModal(1)">
+              View Project
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── PROJECT CARD 3 : Expense Tracker ── -->
+        <div class="project-card reveal" style="transition-delay:.2s">
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  PROJECT 3 COVER IMAGE                   ║
+            ║  Currently using: preview.svg            ║
+            ║  To use a real screenshot instead:       ║
+            ║  1. Take a screenshot, save as           ║
+            ║     projects/04-expense-tracker/         ║
+            ║     preview.png                          ║
+            ║  2. Change the src below to preview.png  ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <img src="projects/04-expense-tracker/preview.png"
+               alt="Expense Tracker preview"
+               class="project-cover-img" />
+
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">localStorage</span>
+            </div>
+            <h3 class="project-title">Expense Tracker</h3>
+            <p class="project-desc">
+              A personal finance app to log income and expenses by category. Features a running
+              balance, spending progress bar, category breakdown, and full localStorage persistence.
+            </p>
+            <button class="btn-ghost" onclick="openModal(2)">
+              View Project
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECT DETAIL MODAL
+       ─ Opened by clicking "View Project"
+       ─ Closed by clicking overlay or ✕ button
+  ════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="modalContent">
+
+      <!--
+        ╔══════════════════════════════════════════╗
+        ║  MODAL BANNER IMAGE (per project)        ║
+        ║                                          ║
+        ║  The banner is injected dynamically by   ║
+        ║  script.js from the `projects` array.    ║
+        ║  To use a real image, update the         ║
+        ║  `bannerImg` field in the projects array ║
+        ║  in script.js (e.g., "project1.png")     ║
+        ╚══════════════════════════════════════════╝
+      -->
+      <div class="modal-banner" id="modalBanner">
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+        </svg>
+        <span>Project Banner</span>
+        <button class="modal-close" onclick="closeModalBtn()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="project-tags" id="modalTags"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Problem</div>
+          <p id="modalProblem"></p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-label">Process</div>
+          <p id="modalProcess"></p>
+        </div>
+        <div class="modal-section">
+          <div class="modal-section-label">Result</div>
+          <p id="modalResult"></p>
+        </div>
+
+        <!-- Gallery images are injected dynamically by openModal() in script.js -->
+        <div class="modal-gallery" id="modalGallery"></div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS SECTION
+       ─ Based on resume: Languages, Frameworks,
+         Databases, Tools & Technologies
+  ════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">Toolkit</div>
+        <h2 class="section-title">Skills &amp; <em>Technologies</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- Languages -->
+        <div class="skill-group reveal">
+          <div class="skill-cat-title">Languages</div>
+          <div class="skill-badges">
+            <div class="skill-badge"><div class="skill-dot"></div>Java</div>
+            <div class="skill-badge"><div class="skill-dot"></div>C</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Python</div>
+            <div class="skill-badge"><div class="skill-dot"></div>JavaScript</div>
+            <div class="skill-badge"><div class="skill-dot"></div>PHP</div>
+            <div class="skill-badge"><div class="skill-dot"></div>HTML5</div>
+            <div class="skill-badge"><div class="skill-dot"></div>CSS3</div>
+            <div class="skill-badge"><div class="skill-dot"></div>SQL</div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-group reveal" style="transition-delay:.1s">
+          <div class="skill-cat-title">Frameworks &amp; Libraries</div>
+          <div class="skill-badges">
+            <div class="skill-badge"><div class="skill-dot"></div>React</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Tailwind CSS</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Bootstrap</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Node.js <span style="font-size:.7rem;opacity:.6;margin-left:.25rem;">(learning)</span></div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-group reveal" style="transition-delay:.2s">
+          <div class="skill-cat-title">Databases</div>
+          <div class="skill-badges">
+            <div class="skill-badge"><div class="skill-dot"></div>MySQL</div>
+            <div class="skill-badge"><div class="skill-dot"></div>phpMyAdmin</div>
+          </div>
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="skill-group reveal" style="transition-delay:.3s">
+          <div class="skill-cat-title">Tools &amp; Technologies</div>
+          <div class="skill-badges">
+            <div class="skill-badge"><div class="skill-dot"></div>Git</div>
+            <div class="skill-badge"><div class="skill-dot"></div>GitHub</div>
+            <div class="skill-badge"><div class="skill-dot"></div>VS Code</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Figma</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Docker</div>
+            <div class="skill-badge"><div class="skill-dot"></div>Browser DevTools</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+       ─ Formspree form — replace YOUR_FORM_ID
+         in the action attribute below
+  ════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">Get in <em>Touch</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Social links -->
+        <div class="reveal" style="transition-delay:.1s">
+          <p class="contact-info-intro">
+            I'm currently open to OJT opportunities, freelance projects, and collaborations.
+            Whether you have a project in mind or just want to say hello — my inbox is always open!
+          </p>
+
+          <div class="contact-links">
+
+            <!-- Email -->
+            <a href="mailto:KenAndreiBatac16@gmail.com" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">KenAndreiBatac16@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/KenAndrei16" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">github.com/KenAndrei16</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/ken-andrei-b-454019360" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-link-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-link-label">LinkedIn</div>
+                <div class="contact-link-value">linkedin.com/in/ken-andrei-b-454019360</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Formspree contact form -->
+        <div class="reveal" style="transition-delay:.2s">
+          <!--
+            ╔══════════════════════════════════════════╗
+            ║  FORMSPREE SETUP INSTRUCTIONS            ║
+            ║                                          ║
+            ║  1. Go to https://formspree.io           ║
+            ║  2. Sign up / log in                     ║
+            ║  3. Create a new form                    ║
+            ║  4. Copy your form ID (looks like:       ║
+            ║     xpwzabcd)                            ║
+            ║  5. Replace YOUR_FORM_ID below with it:  ║
+            ║     action="https://formspree.io/f/      ║
+            ║             YOUR_FORM_ID"                ║
+            ║  6. Formspree will forward submissions   ║
+            ║     to KenAndreiBatac16@gmail.com        ║
+            ╚══════════════════════════════════════════╝
+          -->
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/mlgabkjv"
+            method="POST"
+            onsubmit="handleFormSubmit(event)"
+          >
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submitBtn">
+              Send Message
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
+            </button>
+
+            <!-- Success / error message shown after submit -->
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer>
+    <p>
+      Designed &amp; Built by <span>Ken Andrei A. Batac</span>
+      &mdash; Saint Louis University, Baguio City &copy; 2025
+    </p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

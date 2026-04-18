@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker — Ken Andrei</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- ── HEADER ── -->
+    <header class="app-header">
+      <div>
+        <h1 class="app-title">Expense Tracker</h1>
+        <p class="app-subtitle" id="monthLabel"></p>
+      </div>
+      <button class="btn-reset" onclick="resetData()" title="Clear all data">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 6h18M19 6l-1 14H6L5 6M10 11v6M14 11v6M9 6V4h6v2"/>
+        </svg>
+        Reset
+      </button>
+    </header>
+
+    <!-- ── SUMMARY CARDS ── -->
+    <div class="summary-row">
+      <div class="summary-card income-card">
+        <div class="summary-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+          </svg>
+        </div>
+        <div>
+          <p class="summary-label">Total Income</p>
+          <p class="summary-amount" id="totalIncome">₱ 0.00</p>
+        </div>
+      </div>
+      <div class="summary-card expense-card">
+        <div class="summary-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div>
+          <p class="summary-label">Total Expenses</p>
+          <p class="summary-amount" id="totalExpenses">₱ 0.00</p>
+        </div>
+      </div>
+      <div class="summary-card balance-card">
+        <div class="summary-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+          </svg>
+        </div>
+        <div>
+          <p class="summary-label">Balance</p>
+          <p class="summary-amount" id="balance">₱ 0.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROGRESS BAR ── -->
+    <div class="budget-bar-wrap">
+      <div class="budget-bar-labels">
+        <span>Spent</span>
+        <span id="budgetPercent">0% of income</span>
+      </div>
+      <div class="budget-bar-track">
+        <div class="budget-bar-fill" id="budgetFill"></div>
+      </div>
+    </div>
+
+    <!-- ── ADD TRANSACTION FORM ── -->
+    <div class="add-form">
+      <h2 class="form-title">Add Transaction</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="txDesc">Description</label>
+          <input type="text" id="txDesc" placeholder="e.g. Lunch, Salary..." maxlength="50" />
+        </div>
+        <div class="form-group amount-group">
+          <label for="txAmount">Amount (₱)</label>
+          <input type="number" id="txAmount" placeholder="0.00" min="0" step="0.01" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="txCategory">Category</label>
+          <select id="txCategory">
+            <option value="food">🍜 Food</option>
+            <option value="transport">🚌 Transport</option>
+            <option value="school">📚 School</option>
+            <option value="shopping">🛍 Shopping</option>
+            <option value="health">💊 Health</option>
+            <option value="salary">💰 Salary / Income</option>
+            <option value="other">📦 Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="txType">Type</label>
+          <div class="type-toggle">
+            <button class="type-btn expense active" id="btnExpense" onclick="setType('expense', this)">− Expense</button>
+            <button class="type-btn income" id="btnIncome"  onclick="setType('income',  this)">+ Income</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-add" onclick="addTransaction()">Add Transaction</button>
+    </div>
+
+    <!-- ── CATEGORY BREAKDOWN ── -->
+    <div class="breakdown-section">
+      <h2 class="section-title-sm">By Category</h2>
+      <div class="breakdown-list" id="breakdownList"></div>
+    </div>
+
+    <!-- ── TRANSACTION HISTORY ── -->
+    <div class="history-section">
+      <div class="history-header">
+        <h2 class="section-title-sm">History</h2>
+        <!-- Filter -->
+        <div class="history-filters">
+          <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+          <button class="filter-btn" onclick="setFilter('expense',this)">Expenses</button>
+          <button class="filter-btn" onclick="setFilter('income',this)">Income</button>
+        </div>
+      </div>
+
+      <ul class="tx-list" id="txList"></ul>
+
+      <div class="empty-state" id="emptyState">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+        </svg>
+        <p>No transactions yet. Add one above!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

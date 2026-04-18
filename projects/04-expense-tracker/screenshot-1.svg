@@ -1,0 +1,79 @@
+<svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <rect width="560" height="460" fill="#0d1117"/>
+
+  <!-- Header -->
+  <rect x="20" y="16" width="520" height="54" rx="12" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="44" y="40" font-size="16" font-weight="700" fill="#d4a843">Expense Tracker</text>
+  <text x="44" y="56" font-size="10" fill="#8892a4">April 2026</text>
+  <rect x="460" y="26" width="64" height="24" rx="7" fill="none" stroke="#f85149" stroke-width="1" stroke-opacity="0.35"/>
+  <text x="492" y="42" font-size="10" fill="#f85149" text-anchor="middle">🗑 Reset</text>
+
+  <!-- Summary row -->
+  <rect x="20"  y="80" width="158" height="54" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity="0.22"/>
+  <rect x="34"  y="94" width="28" height="28" rx="7" fill="#3fb950" fill-opacity="0.12"/>
+  <text x="43" y="113" font-size="14" fill="#3fb950">↑</text>
+  <text x="70" y="100" font-size="9" fill="#8892a4">TOTAL INCOME</text>
+  <text x="70" y="120" font-size="14" font-weight="700" fill="#3fb950">₱ 15,000.00</text>
+
+  <rect x="190" y="80" width="170" height="54" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1" stroke-opacity="0.22"/>
+  <rect x="204" y="94" width="28" height="28" rx="7" fill="#f85149" fill-opacity="0.12"/>
+  <text x="213" y="113" font-size="14" fill="#f85149">↓</text>
+  <text x="240" y="100" font-size="9" fill="#8892a4">TOTAL EXPENSES</text>
+  <text x="240" y="120" font-size="14" font-weight="700" fill="#f85149">₱ 8,450.00</text>
+
+  <rect x="372" y="80" width="168" height="54" rx="10" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.22"/>
+  <rect x="386" y="94" width="28" height="28" rx="7" fill="#d4a843" fill-opacity="0.12"/>
+  <text x="392" y="113" font-size="14">💳</text>
+  <text x="422" y="100" font-size="9" fill="#8892a4">BALANCE</text>
+  <text x="422" y="120" font-size="14" font-weight="700" fill="#d4a843">₱ 6,550.00</text>
+
+  <!-- Progress bar -->
+  <rect x="20" y="146" width="520" height="38" rx="10" fill="#161b22" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05"/>
+  <text x="36" y="162" font-size="10" fill="#8892a4">Spent</text>
+  <text x="504" y="162" font-size="10" fill="#8892a4" text-anchor="end">56% of income</text>
+  <rect x="36" y="168" width="488" height="7" rx="3.5" fill="#0d1117"/>
+  <rect x="36" y="168" width="273" height="7" rx="3.5" fill="#3fb950"/>
+
+  <!-- Add form — user filling in "Jollibee" -->
+  <rect x="20" y="196" width="520" height="100" rx="12" fill="#161b22" stroke="#d4a843" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="38" y="218" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">ADD TRANSACTION</text>
+  <!-- desc input - active -->
+  <rect x="36" y="226" width="196" height="28" rx="7" fill="#0d1117" stroke="#d4a843" stroke-width="1.5"/>
+  <text x="50" y="244" font-size="11" fill="#e6edf3">Jollibee lunch|</text>
+  <!-- amount input -->
+  <rect x="240" y="226" width="106" height="28" rx="7" fill="#0d1117" stroke="#d4a843" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="255" y="244" font-size="11" fill="#e6edf3">220.00</text>
+  <!-- category -->
+  <rect x="354" y="226" width="96" height="28" rx="7" fill="#0d1117" stroke="#d4a843" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="366" y="244" font-size="11" fill="#8892a4">🍜 Food</text>
+  <!-- type: expense active -->
+  <rect x="458" y="226" width="68" height="28" rx="7" fill="#f85149" fill-opacity="0.15" stroke="#f85149" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="492" y="244" font-size="10" fill="#f85149" text-anchor="middle">− Expense</text>
+  <!-- Add btn -->
+  <rect x="36" y="262" width="490" height="26" rx="7" fill="#d4a843"/>
+  <text x="281" y="279" font-size="12" font-weight="700" fill="#0a0f1e" text-anchor="middle">Add Transaction</text>
+
+  <!-- History -->
+  <rect x="20" y="308" width="520" height="134" rx="12" fill="#161b22" stroke="#ffffff" stroke-width="1" stroke-opacity="0.05"/>
+  <text x="38" y="328" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">HISTORY</text>
+
+  <rect x="30" y="336" width="500" height="28" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="354" font-size="14">🍜</text>
+  <text x="66" y="349" font-size="11" font-weight="500" fill="#e6edf3">Jollibee lunch</text>
+  <text x="66" y="361" font-size="9" fill="#4a5568">Apr 18 · food</text>
+  <text x="520" y="354" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱220.00</text>
+
+  <rect x="30" y="368" width="500" height="28" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="386" font-size="14">💰</text>
+  <text x="66" y="381" font-size="11" font-weight="500" fill="#e6edf3">Monthly allowance</text>
+  <text x="66" y="393" font-size="9" fill="#4a5568">Apr 17 · salary</text>
+  <text x="520" y="386" font-size="12" font-weight="700" fill="#3fb950" text-anchor="end">+₱5,000.00</text>
+
+  <rect x="30" y="400" width="500" height="28" rx="8" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <text x="46" y="418" font-size="14">🚌</text>
+  <text x="66" y="413" font-size="11" font-weight="500" fill="#e6edf3">Jeepney fare</text>
+  <text x="66" y="425" font-size="9" fill="#4a5568">Apr 17 · transport</text>
+  <text x="520" y="418" font-size="12" font-weight="700" fill="#f85149" text-anchor="end">−₱25.00</text>
+
+  <text x="280" y="452" font-size="10" fill="#4a5568" text-anchor="middle">Screenshot 1 — Adding a new expense transaction</text>
+</svg>
