@@ -671,8 +671,8 @@ img.about-photo {
 
 .modal-banner {
   width: 100%;
-  aspect-ratio: 16 / 6;
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-primary));
+  aspect-ratio: 900 / 260;  /* matches the SVG viewBox exactly */
+  background: #0a0f1e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,7 +681,7 @@ img.about-photo {
   color: var(--text-muted);
   font-size: 0.85rem;
   position: relative;
-  overflow: hidden;   /* clip image to banner bounds */
+  overflow: hidden;
 }
 .modal-banner svg { opacity: 0.2; }
 
@@ -691,9 +691,10 @@ img.about-photo {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* fills the area, crops sides if needed */
-  object-position: center; /* always centered */
+  object-fit: contain;      /* show full image, no cropping */
+  object-position: center;  /* always centered */
   display: block;
+  background: #0a0f1e;      /* dark fill behind any empty space */
 }
 
 .modal-close {
@@ -781,8 +782,6 @@ img.about-photo {
   flex-direction: column;
   gap: 2.5rem;
 }
-
-.skill-group {}
 
 .skill-cat-title {
   font-size: 0.85rem;
