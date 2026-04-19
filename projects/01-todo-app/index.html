@@ -78,6 +78,21 @@
       <button class="filter-btn" onclick="setFilter('done', this)">Done</button>
     </div>
 
+    <!-- ── PRIORITY FILTER ── -->
+    <div class="priority-tabs">
+      <span class="priority-tab-label">Priority:</span>
+      <button class="priority-filter-btn active" onclick="setPriorityFilter('all', this)">All</button>
+      <button class="priority-filter-btn" onclick="setPriorityFilter('high', this)">
+        <span class="pdot high"></span>High
+      </button>
+      <button class="priority-filter-btn" onclick="setPriorityFilter('medium', this)">
+        <span class="pdot medium"></span>Medium
+      </button>
+      <button class="priority-filter-btn" onclick="setPriorityFilter('low', this)">
+        <span class="pdot low"></span>Low
+      </button>
+    </div>
+
     <!-- ── TASK LIST ── -->
     <ul class="task-list" id="taskList"></ul>
 

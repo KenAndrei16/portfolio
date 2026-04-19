@@ -7,9 +7,9 @@
 ════════════════════════════════════════════ */
 
 // ── STATE ──
-// Load tasks from localStorage on startup, or start with empty array
-let tasks  = JSON.parse(localStorage.getItem('kab-tasks')) || [];
-let filter = 'all'; // 'all' | 'pending' | 'done'
+let tasks          = JSON.parse(localStorage.getItem('kab-tasks')) || [];
+let filter         = 'all'; // 'all' | 'pending' | 'done'
+let priorityFilter = 'all'; // 'all' | 'high' | 'medium' | 'low'
 
 // ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,14 +85,19 @@ function clearCompleted() {
   render();
 }
 
-// ── SET FILTER ──
+// ── SET FILTER (All / Pending / Done) ──
 function setFilter(value, btn) {
   filter = value;
-
-  // Update active button style
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  render();
+}
 
+// ── SET PRIORITY FILTER ──
+function setPriorityFilter(value, btn) {
+  priorityFilter = value;
+  document.querySelectorAll('.priority-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
   render();
 }
 
@@ -102,11 +107,11 @@ function render() {
   const list       = document.getElementById('taskList');
   const emptyState = document.getElementById('emptyState');
 
-  // Apply filter
+  // Apply status filter then priority filter
   const visible = tasks.filter(t => {
-    if (filter === 'pending') return !t.done;
-    if (filter === 'done')    return t.done;
-    return true; // 'all'
+    const statusOk   = filter === 'all' || (filter === 'pending' && !t.done) || (filter === 'done' && t.done);
+    const priorityOk = priorityFilter === 'all' || t.priority === priorityFilter;
+    return statusOk && priorityOk;
   });
 
   // Build HTML for each task

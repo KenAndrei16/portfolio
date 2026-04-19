@@ -273,3 +273,49 @@ body {
   .add-task-form { flex-wrap: wrap; }
   .task-input { width: 100%; }
 }
+
+/* ── PRIORITY FILTER ROW ── */
+.priority-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 1.75rem 0.75rem;
+  background: #0d1117;
+  flex-wrap: wrap;
+}
+.priority-tab-label {
+  font-size: 0.72rem;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 0.25rem;
+}
+.priority-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #8892a4;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.priority-filter-btn:hover { color: #d4a843; }
+.priority-filter-btn.active {
+  background: rgba(212,168,67,0.1);
+  border-color: rgba(212,168,67,0.3);
+  color: #d4a843;
+}
+.pdot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pdot.high   { background: #f85149; }
+.pdot.medium { background: #d4a843; }
+.pdot.low    { background: #3fb950; }
