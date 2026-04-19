@@ -1,65 +1,37 @@
-<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif">
-  <rect width="900" height="280" fill="#0a0f1e"/>
-  <rect x="0" y="0" width="900" height="280" fill="#d4a843" fill-opacity=".03"/>
-  <!-- left panel -->
-  <rect x="30" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".18" stroke-width="1"/>
-  <rect x="30" y="40" width="220" height="46" rx="12" fill="#0d1117"/>
-  <rect x="30" y="74" width="220" height="12" fill="#0d1117"/>
-  <text x="54" y="70" font-size="15" font-weight="700" fill="#d4a843">My Tasks</text>
-  <rect x="30" y="86" width="220" height="36" fill="#d4a843" fill-opacity=".04"/>
-  <text x="95"  y="101" font-size="18" font-weight="700" fill="#d4a843" text-anchor="middle">8</text>
-  <text x="95"  y="115" font-size="8"  fill="#8892a4" text-anchor="middle" letter-spacing="1">TOTAL</text>
-  <text x="140" y="101" font-size="18" font-weight="700" fill="#3fb950" text-anchor="middle">5</text>
-  <text x="140" y="115" font-size="8"  fill="#8892a4" text-anchor="middle" letter-spacing="1">DONE</text>
-  <text x="186" y="101" font-size="18" font-weight="700" fill="#f0c060" text-anchor="middle">3</text>
-  <text x="186" y="115" font-size="8"  fill="#8892a4" text-anchor="middle" letter-spacing="1">PENDING</text>
-  <circle cx="52" cy="148" r="7" fill="#d4a843"/>
-  <polyline points="48,148 51,153 58,143" fill="none" stroke="#0a0f1e" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="63" cy="148" r="3" fill="#f85149"/>
-  <text x="71" y="152" font-size="10" fill="#4a5568" text-decoration="line-through">Submit assignment</text>
-  <circle cx="52" cy="168" r="7" fill="#d4a843"/>
-  <polyline points="48,168 51,173 58,163" fill="none" stroke="#0a0f1e" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="63" cy="168" r="3" fill="#d4a843"/>
-  <text x="71" y="172" font-size="10" fill="#4a5568" text-decoration="line-through">Review notes</text>
-  <circle cx="52" cy="188" r="7" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
-  <circle cx="63" cy="188" r="3" fill="#f85149"/>
-  <text x="71" y="192" font-size="10" fill="#e6edf3">Submit OJT application</text>
-  <circle cx="52" cy="208" r="7" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
-  <circle cx="63" cy="208" r="3" fill="#3fb950"/>
-  <text x="71" y="212" font-size="10" fill="#e6edf3">Finish portfolio website</text>
-  <circle cx="52" cy="228" r="7" fill="none" stroke="#d4a843" stroke-width="1.5" stroke-opacity=".5"/>
-  <circle cx="63" cy="228" r="3" fill="#d4a843"/>
-  <text x="71" y="232" font-size="10" fill="#e6edf3">Study for finals</text>
-  <!-- center text — well spaced -->
-  <text x="450" y="90"  font-size="11" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="4">PROJECT  01</text>
-  <text x="450" y="138" font-size="42" font-weight="900" fill="#e6edf3" text-anchor="middle" letter-spacing="-1">To-Do List App</text>
-  <text x="450" y="164" font-size="13" fill="#8892a4" text-anchor="middle">Vanilla JS · localStorage · Priority Levels · Filter Tabs</text>
-  <rect x="330" y="180" width="60" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="360" y="194" font-size="10" fill="#d4a843" text-anchor="middle">HTML5</text>
-  <rect x="398" y="180" width="50" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="423" y="194" font-size="10" fill="#d4a843" text-anchor="middle">CSS3</text>
-  <rect x="456" y="180" width="84" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="498" y="194" font-size="10" fill="#d4a843" text-anchor="middle">JavaScript</text>
-  <rect x="548" y="180" width="90" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="593" y="194" font-size="10" fill="#d4a843" text-anchor="middle">localStorage</text>
-  <!-- right panel -->
-  <rect x="650" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".15" stroke-width="1"/>
-  <text x="760" y="72" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">TASK STATS</text>
-  <text x="700" y="130" font-size="44" font-weight="900" fill="#d4a843" text-anchor="middle">8</text>
-  <text x="700" y="148" font-size="9"  fill="#8892a4" text-anchor="middle">TOTAL</text>
-  <line x1="730" y1="100" x2="730" y2="158" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="760" y="116" font-size="34" font-weight="900" fill="#3fb950" text-anchor="middle">5</text>
-  <text x="760" y="132" font-size="9"  fill="#8892a4" text-anchor="middle">DONE</text>
-  <text x="760" y="148" font-size="10" fill="#3fb950" text-anchor="middle">62%</text>
-  <line x1="792" y1="100" x2="792" y2="158" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="820" y="116" font-size="34" font-weight="900" fill="#f0c060" text-anchor="middle">3</text>
-  <text x="820" y="132" font-size="9"  fill="#8892a4" text-anchor="middle">PENDING</text>
-  <rect x="660" y="162" width="200" height="1" fill="#ffffff" fill-opacity=".06"/>
-  <circle cx="674" cy="180" r="5" fill="#f85149"/>
-  <text x="684" y="184" font-size="10" fill="#8892a4">High</text>
-  <circle cx="720" cy="180" r="5" fill="#d4a843"/>
-  <text x="730" y="184" font-size="10" fill="#8892a4">Medium</text>
-  <circle cx="790" cy="180" r="5" fill="#3fb950"/>
-  <text x="800" y="184" font-size="10" fill="#8892a4">Low</text>
-  <rect x="0" y="270" width="900" height="10" fill="#d4a843" fill-opacity=".06"/>
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif" preserveAspectRatio="xMidYMid meet">
+  <!-- Background -->
+  <rect width="900" height="260" fill="#0a0f1e"/>
+  <!-- Subtle gold glow top center -->
+  <ellipse cx="450" cy="0" rx="400" ry="140" fill="#d4a843" fill-opacity="0.07"/>
+  <!-- Grid lines -->
+  <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
+  </pattern>
+  <rect width="900" height="260" fill="url(#g)"/>
+
+  <!-- PROJECT LABEL -->
+  <text x="450" y="62" font-size="11" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="5">PROJECT  01</text>
+
+  <!-- TITLE - centered -->
+  <text x="450" y="118" font-size="52" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-1">To-Do List App</text>
+
+  <!-- SUBTITLE - centered -->
+  <text x="450" y="152" font-size="14" fill="#8892a4" text-anchor="middle">Vanilla JS · localStorage · Priority Levels · Filter Tabs</text>
+
+  <!-- TAGS - all centered around x=450 -->
+  <!-- Total width: 60+8+50+8+84+8+90 = 308, so start at 450 - 308/2 = 296 -->
+  <rect x="296" y="170" width="60"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="326"  y="185" font-size="11" fill="#d4a843" text-anchor="middle">HTML5</text>
+
+  <rect x="364" y="170" width="50"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="389"  y="185" font-size="11" fill="#d4a843" text-anchor="middle">CSS3</text>
+
+  <rect x="422" y="170" width="86"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="465"  y="185" font-size="11" fill="#d4a843" text-anchor="middle">JavaScript</text>
+
+  <rect x="516" y="170" width="90"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="561"  y="185" font-size="11" fill="#d4a843" text-anchor="middle">localStorage</text>
+
+  <!-- Bottom gold line -->
+  <rect x="0" y="252" width="900" height="8" fill="#d4a843" fill-opacity="0.08"/>
 </svg>

@@ -39,9 +39,9 @@ const projects = [
       "Built a fully client-side task manager using vanilla JavaScript. Tasks are stored in localStorage so they persist after closing the browser. Features include priority levels (Low / Medium / High), a filter system (All / Pending / Done), and a live stats counter.",
     result:
       "A clean, zero-dependency to-do app that works entirely in the browser — no server, no database, no login required. Fast to load and easy to extend.",
-    // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://todo-app-kenandrei16s-projects.vercel.app",
-    repoUrl: "https://github.com/KenAndrei16/todo-app",
+    // Live Demo opens the project directly inside your portfolio on Vercel
+    liveUrl: "projects/01-todo-app/index.html",
+    repoUrl: "https://github.com/KenAndrei16/portfolio",
   },
   {
     // index 1 → Card 2: Weather App UI
@@ -59,9 +59,8 @@ const projects = [
       "Designed a weather dashboard with a search bar, quick-city shortcuts, a live clock, and a 5-day forecast. Weather data for 5 cities is stored in a separate data.js file that mirrors a real OpenWeatherMap API response. Celsius/Fahrenheit toggling and dynamic background themes per city are fully implemented.",
     result:
       "A visually polished weather app UI that demonstrates API-driven design patterns. Swapping the mock data for real fetch() calls to OpenWeatherMap would make it fully production-ready.",
-    // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://weather-cf2x2h3hv-kenandrei16s-projects.vercel.app",
-    repoUrl: "https://github.com/KenAndrei16/weather-app",
+    liveUrl: "projects/02-weather-app/index.html",
+    repoUrl: "https://github.com/KenAndrei16/portfolio",
   },
   {
     // index 2 → Card 3: Expense Tracker
@@ -79,9 +78,8 @@ const projects = [
       "Built a single-page expense tracker with income and expense types, 7 spending categories, and real-time balance calculation. Transactions persist in localStorage. Includes a spending progress bar (turns red above 80%), a per-category breakdown with proportional bars, and a filterable transaction history.",
     result:
       "A practical personal finance tool covering full CRUD — add, view, filter, and delete transactions — with a clean dashboard that gives an instant snapshot of financial health.",
-    // ── REPLACE the URLs below after deploying each project on Vercel ──
-    liveUrl: "https://expense-tracker-7lke0g0t5-kenandrei16s-projects.vercel.app",
-    repoUrl: "https://github.com/KenAndrei16/expense-tracker",
+    liveUrl: "projects/04-expense-tracker/index.html",
+    repoUrl: "https://github.com/KenAndrei16/portfolio",
   },
 ];
 
@@ -143,8 +141,7 @@ function openModal(index) {
   const banner = document.getElementById('modalBanner');
   if (p.bannerImg) {
     banner.innerHTML = `
-      <img src="${p.bannerImg}" alt="${p.title} banner"
-           style="width:100%;height:100%;object-fit:cover;display:block;" />
+      <img src="${p.bannerImg}" alt="${p.title} banner" />
       <button class="modal-close" onclick="closeModalBtn()" aria-label="Close">✕</button>`;
   } else {
     banner.innerHTML = `

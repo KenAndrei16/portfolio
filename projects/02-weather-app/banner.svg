@@ -1,52 +1,39 @@
-<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif">
-  <rect width="900" height="280" fill="#0a0f1e"/>
-  <!-- left panel: city card -->
-  <rect x="30" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".18" stroke-width="1"/>
-  <text x="54" y="74" font-size="18" font-weight="700" fill="#e6edf3">Baguio City</text>
-  <text x="54" y="92" font-size="11" fill="#8892a4">Philippines  ·  10:42 AM</text>
-  <text x="54" y="148" font-size="52" font-weight="900" fill="#d4a843" letter-spacing="-2">18°</text>
-  <text x="54" y="172" font-size="11" fill="#8892a4">⛅ Partly Cloudy</text>
-  <rect x="40" y="188" width="200" height="1" fill="#ffffff" fill-opacity=".06"/>
-  <text x="54"  y="206" font-size="9" fill="#4a5568">HUMIDITY</text>
-  <text x="54"  y="220" font-size="12" font-weight="600" fill="#e6edf3">78%</text>
-  <text x="130" y="206" font-size="9" fill="#4a5568">WIND</text>
-  <text x="130" y="220" font-size="12" font-weight="600" fill="#e6edf3">12 km/h</text>
-  <!-- center -->
-  <text x="450" y="88"  font-size="11" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="4">PROJECT  02</text>
-  <text x="450" y="136" font-size="42" font-weight="900" fill="#e6edf3" text-anchor="middle" letter-spacing="-1">Weather App UI</text>
-  <text x="450" y="162" font-size="13" fill="#8892a4" text-anchor="middle">Mock API · 5-Day Forecast · °C/°F Toggle · Live Clock</text>
-  <rect x="318" y="178" width="60" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="348" y="192" font-size="10" fill="#d4a843" text-anchor="middle">HTML5</text>
-  <rect x="386" y="178" width="50" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="411" y="192" font-size="10" fill="#d4a843" text-anchor="middle">CSS3</text>
-  <rect x="444" y="178" width="84" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="486" y="192" font-size="10" fill="#d4a843" text-anchor="middle">JavaScript</text>
-  <rect x="536" y="178" width="76" height="20" rx="10" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="574" y="192" font-size="10" fill="#d4a843" text-anchor="middle">Mock API</text>
-  <!-- right panel: forecast -->
-  <rect x="650" y="40" width="220" height="200" rx="12" fill="#161b22" stroke="#d4a843" stroke-opacity=".15" stroke-width="1"/>
-  <text x="760" y="68" font-size="9" fill="#8892a4" text-anchor="middle" letter-spacing="1">5-DAY FORECAST</text>
-  <rect x="660" y="76" width="38" height="54" rx="8" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="679" y="90" font-size="8" fill="#8892a4" text-anchor="middle">MON</text>
-  <text x="675" y="110" font-size="16">🌤</text><text x="679" y="124" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">19°</text>
-  <rect x="704" y="76" width="38" height="54" rx="8" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="723" y="90" font-size="8" fill="#8892a4" text-anchor="middle">TUE</text>
-  <text x="719" y="110" font-size="16">🌧</text><text x="723" y="124" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">16°</text>
-  <rect x="748" y="76" width="38" height="54" rx="8" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="767" y="90" font-size="8" fill="#8892a4" text-anchor="middle">WED</text>
-  <text x="763" y="110" font-size="16">⛈</text><text x="767" y="124" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">15°</text>
-  <rect x="792" y="76" width="38" height="54" rx="8" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="811" y="90" font-size="8" fill="#8892a4" text-anchor="middle">THU</text>
-  <text x="807" y="110" font-size="16">🌥</text><text x="811" y="124" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle">17°</text>
-  <rect x="836" y="76" width="24" height="54" rx="8" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
-  <text x="848" y="90" font-size="7" fill="#8892a4" text-anchor="middle">FRI</text>
-  <text x="844" y="108" font-size="14">☀️</text><text x="848" y="122" font-size="9" font-weight="700" fill="#e6edf3" text-anchor="middle">20°</text>
-  <rect x="660" y="142" width="200" height="1" fill="#ffffff" fill-opacity=".06"/>
-  <text x="660" y="158" font-size="9" fill="#4a5568">HUMIDITY</text>
-  <text x="660" y="172" font-size="12" font-weight="600" fill="#e6edf3">78%</text>
-  <text x="730" y="158" font-size="9" fill="#4a5568">WIND</text>
-  <text x="730" y="172" font-size="12" font-weight="600" fill="#e6edf3">12 km/h</text>
-  <text x="800" y="158" font-size="9" fill="#4a5568">SUNRISE</text>
-  <text x="800" y="172" font-size="12" font-weight="600" fill="#e6edf3">5:48 AM</text>
-  <rect x="0" y="270" width="900" height="10" fill="#d4a843" fill-opacity=".06"/>
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif" preserveAspectRatio="xMidYMid meet">
+  <!-- Background -->
+  <rect width="900" height="260" fill="#0a0f1e"/>
+  <!-- Blue-tinted glow for weather feel -->
+  <ellipse cx="450" cy="0" rx="400" ry="140" fill="#d4a843" fill-opacity="0.07"/>
+  <!-- Grid -->
+  <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" stroke-opacity="0.04"/>
+  </pattern>
+  <rect width="900" height="260" fill="url(#g)"/>
+
+  <!-- Weather emoji centered -->
+  <text x="450" y="56" font-size="32" text-anchor="middle">⛅</text>
+
+  <!-- PROJECT LABEL -->
+  <text x="450" y="84" font-size="11" font-weight="600" fill="#d4a843" text-anchor="middle" letter-spacing="5">PROJECT  02</text>
+
+  <!-- TITLE -->
+  <text x="450" y="136" font-size="52" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-1">Weather App UI</text>
+
+  <!-- SUBTITLE -->
+  <text x="450" y="167" font-size="14" fill="#8892a4" text-anchor="middle">Mock API · 5-Day Forecast · °C/°F Toggle · Live Clock</text>
+
+  <!-- TAGS - total width: 60+8+50+8+84+8+76 = 294, start at 450-294/2 = 303 -->
+  <rect x="303" y="183" width="60"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="333"  y="198" font-size="11" fill="#d4a843" text-anchor="middle">HTML5</text>
+
+  <rect x="371" y="183" width="50"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="396"  y="198" font-size="11" fill="#d4a843" text-anchor="middle">CSS3</text>
+
+  <rect x="429" y="183" width="86"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="472"  y="198" font-size="11" fill="#d4a843" text-anchor="middle">JavaScript</text>
+
+  <rect x="523" y="183" width="76"  height="22" rx="11" fill="#d4a843" fill-opacity=".12" stroke="#d4a843" stroke-opacity=".35" stroke-width="1"/>
+  <text x="561"  y="198" font-size="11" fill="#d4a843" text-anchor="middle">Mock API</text>
+
+  <!-- Bottom gold line -->
+  <rect x="0" y="252" width="900" height="8" fill="#d4a843" fill-opacity="0.08"/>
 </svg>

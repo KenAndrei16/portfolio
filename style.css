@@ -681,8 +681,20 @@ img.about-photo {
   color: var(--text-muted);
   font-size: 0.85rem;
   position: relative;
+  overflow: hidden;   /* clip image to banner bounds */
 }
 .modal-banner svg { opacity: 0.2; }
+
+/* Image injected by openModal() — must fill the full banner */
+.modal-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills the area, crops sides if needed */
+  object-position: center; /* always centered */
+  display: block;
+}
 
 .modal-close {
   position: absolute;
@@ -770,7 +782,7 @@ img.about-photo {
   gap: 2.5rem;
 }
 
-
+.skill-group {}
 
 .skill-cat-title {
   font-size: 0.85rem;
