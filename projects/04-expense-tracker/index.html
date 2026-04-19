@@ -2,11 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 19.9,12.3 31,12.3 22,18.7 25.4,29 16,22.7 6.6,29 10,18.7 1,12.3 12.1,12.3' fill='%23d4a843'/%3E%3C/svg%3E" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expense Tracker — Ken Andrei</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .back-btn {
+      position: fixed; top: 1rem; left: 1rem; z-index: 999;
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(10,15,30,.85); color: #d4a843;
+      border: 1px solid rgba(212,168,67,.35); border-radius: 9px;
+      padding: .55rem 1rem; font-size: .82rem; font-weight: 600;
+      text-decoration: none; backdrop-filter: blur(12px);
+      font-family: 'Segoe UI', sans-serif;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .back-btn:hover { background: rgba(212,168,67,.15); border-color: #d4a843; transform: translateX(-2px); }
+    .back-btn svg { flex-shrink: 0; }
+  </style>
 </head>
 <body>
+
+  <!-- Back to Portfolio button -->
+  <a href="../../index.html" class="back-btn">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    ★ Back to Portfolio
+  </a>
 
   <div class="app-wrapper">
 

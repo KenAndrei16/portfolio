@@ -1,63 +1,51 @@
-<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
-  <rect width="480" height="400" fill="#0d1117"/>
-  <!-- Search -->
-  <rect x="20" y="16" width="440" height="36" rx="10" fill="#161b22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.2"/>
-  <text x="56" y="38" font-size="12" fill="#4a5568">Search city...</text>
-  <rect x="374" y="22" width="76" height="24" rx="7" fill="#d4a843"/>
-  <text x="412" y="38" font-size="12" font-weight="700" fill="#0a0f1e" text-anchor="middle">Search</text>
-  <!-- Manila highlighted -->
-  <rect x="72" y="60" width="50" height="20" rx="10" fill="#d4a843" fill-opacity="0.22" stroke="#d4a843" stroke-width="1" stroke-opacity="0.5"/>
-  <text x="97" y="74" font-size="10" fill="#d4a843" text-anchor="middle">Manila</text>
-
-  <!-- Card — hot sunny tint -->
-  <rect x="20" y="88" width="440" height="294" rx="18" fill="#1a1a0e" stroke="#d4a843" stroke-width="1" stroke-opacity="0.22"/>
-
-  <text x="46" y="122" font-size="20" font-weight="700" fill="#e6edf3">Manila</text>
-  <text x="46" y="140" font-size="12" fill="#8892a4">Philippines 🇵🇭</text>
-  <text x="46" y="156" font-size="11" fill="#4a5568">02:05:12 PM</text>
-  <text x="400" y="144" font-size="52" text-anchor="middle">☀️</text>
-  <text x="400" y="164" font-size="11" fill="#8892a4" text-anchor="middle">Hot and Humid</text>
-
-  <!-- High temp in Celsius -->
-  <text x="46" y="212" font-size="68" font-weight="900" fill="#d4a843" letter-spacing="-2">32</text>
-  <rect x="118" y="174" width="26" height="20" rx="5" fill="#d4a843" fill-opacity="0.18" stroke="#d4a843" stroke-width="1"/>
-  <text x="131" y="188" font-size="11" font-weight="700" fill="#d4a843" text-anchor="middle">°C</text>
-  <rect x="118" y="198" width="26" height="20" rx="5" fill="none" stroke="#d4a843" stroke-width="1" stroke-opacity="0.25"/>
-  <text x="131" y="212" font-size="11" fill="#8892a4" text-anchor="middle">°F</text>
-
-  <!-- UV high warning -->
-  <rect x="154" y="198" width="100" height="22" rx="11" fill="#f85149" fill-opacity="0.1" stroke="#f85149" stroke-width="1" stroke-opacity="0.4"/>
-  <text x="204" y="213" font-size="10" fill="#f85149" text-anchor="middle">⚠ UV: 8 Very High</text>
-
+<svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',sans-serif" preserveAspectRatio="xMidYMid meet">
+  <rect width="600" height="440" fill="#0d1117"/>
+  <rect x="40" y="16" width="520" height="36" rx="10" fill="#161b22" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+  <text x="78" y="38" font-size="12" fill="#4a5568">Search city...</text>
+  <rect x="462" y="22" width="88" height="24" rx="7" fill="#d4a843"/>
+  <text x="506" y="38" font-size="12" font-weight="700" fill="#0a0f1e" text-anchor="middle">Search</text>
+  <!-- Manila chip highlighted -->
+  <rect x="108" y="60" width="52" height="20" rx="10" fill="#d4a843" fill-opacity=".22" stroke="#d4a843" stroke-opacity=".5" stroke-width="1"/>
+  <text x="134" y="74" font-size="10" fill="#d4a843" text-anchor="middle">Manila</text>
+  <!-- Hot sunny card -->
+  <rect x="40" y="88" width="520" height="328" rx="18" fill="#1a1a0e" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+  <text x="68" y="126" font-size="22" font-weight="700" fill="#e6edf3">Manila</text>
+  <text x="68" y="146" font-size="13" fill="#8892a4">Philippines 🇵🇭  ·  02:05 PM</text>
+  <text x="520" y="140" font-size="58" text-anchor="middle">☀️</text>
+  <text x="520" y="162" font-size="11" fill="#8892a4" text-anchor="middle">Hot and Humid</text>
+  <!-- High temp -->
+  <text x="68" y="216" font-size="76" font-weight="900" fill="#d4a843" letter-spacing="-2">32</text>
+  <rect x="152" y="178" width="30" height="22" rx="5" fill="#d4a843" fill-opacity=".18" stroke="#d4a843" stroke-width="1"/>
+  <text x="167" y="193" font-size="12" font-weight="700" fill="#d4a843" text-anchor="middle">°C</text>
+  <!-- UV High warning badge -->
+  <rect x="190" y="194" width="120" height="22" rx="11" fill="#f85149" fill-opacity=".1" stroke="#f85149" stroke-opacity=".4" stroke-width="1"/>
+  <text x="250" y="209" font-size="10" fill="#f85149" text-anchor="middle">⚠ UV: 8 Very High</text>
   <!-- Details -->
-  <rect x="20" y="228" width="440" height="1" fill="#ffffff" fill-opacity="0.06"/>
-  <text x="86" y="247" font-size="9" fill="#4a5568" text-anchor="middle">HUMIDITY</text>
-  <text x="86" y="263" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">85%</text>
-  <line x1="170" y1="230" x2="170" y2="270" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="240" y="247" font-size="9" fill="#4a5568" text-anchor="middle">WIND</text>
-  <text x="240" y="263" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">18 km/h</text>
-  <line x1="320" y1="230" x2="320" y2="270" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="390" y="247" font-size="9" fill="#4a5568" text-anchor="middle">PRESSURE</text>
-  <text x="390" y="263" font-size="13" font-weight="600" fill="#e6edf3" text-anchor="middle">1008 hPa</text>
-
+  <rect x="40" y="234" width="520" height="1" fill="#ffffff" fill-opacity=".06"/>
+  <text x="130" y="254" font-size="9" fill="#4a5568" text-anchor="middle">HUMIDITY</text>
+  <text x="130" y="270" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">85%</text>
+  <line x1="220" y1="237" x2="220" y2="276" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="300" y="254" font-size="9" fill="#4a5568" text-anchor="middle">WIND</text>
+  <text x="300" y="270" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">18 km/h</text>
+  <line x1="380" y1="237" x2="380" y2="276" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="460" y="254" font-size="9" fill="#4a5568" text-anchor="middle">PRESSURE</text>
+  <text x="460" y="270" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">1008 hPa</text>
   <!-- Forecast -->
-  <rect x="20" y="272" width="440" height="1" fill="#ffffff" fill-opacity="0.06"/>
-  <text x="46" y="290" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">5-DAY FORECAST</text>
-  <rect x="32"  y="298" width="70" height="40" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="67"  y="312" font-size="9" fill="#8892a4" text-anchor="middle">MON</text>
-  <text x="63"  y="328" font-size="16">☀️</text><text x="67" y="333" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle"> 33°</text>
-  <rect x="110" y="298" width="70" height="40" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="145" y="312" font-size="9" fill="#8892a4" text-anchor="middle">TUE</text>
-  <text x="141" y="328" font-size="16">⛅</text><text x="145" y="333" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle"> 31°</text>
-  <rect x="188" y="298" width="70" height="40" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="223" y="312" font-size="9" fill="#8892a4" text-anchor="middle">WED</text>
-  <text x="219" y="328" font-size="16">🌦</text><text x="223" y="333" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle"> 30°</text>
-  <rect x="266" y="298" width="70" height="40" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="301" y="312" font-size="9" fill="#8892a4" text-anchor="middle">THU</text>
-  <text x="297" y="328" font-size="16">🌧</text><text x="301" y="333" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle"> 28°</text>
-  <rect x="344" y="298" width="70" height="40" rx="8" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
-  <text x="379" y="312" font-size="9" fill="#8892a4" text-anchor="middle">FRI</text>
-  <text x="375" y="328" font-size="16">⛅</text><text x="379" y="333" font-size="10" font-weight="700" fill="#e6edf3" text-anchor="middle"> 31°</text>
-
-  <text x="240" y="392" font-size="10" fill="#4a5568" text-anchor="middle">Screenshot 3 — Manila, high UV warning shown</text>
+  <rect x="40" y="278" width="520" height="1" fill="#ffffff" fill-opacity=".06"/>
+  <text x="68" y="298" font-size="9" font-weight="700" fill="#d4a843" letter-spacing="1">5-DAY FORECAST</text>
+  <rect x="52"  y="306" width="88" height="48" rx="9" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="96"  y="321" font-size="9" fill="#8892a4" text-anchor="middle">MON</text>
+  <text x="88"  y="340" font-size="18">☀️</text><text x="96" y="348" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="middle"> 33°</text>
+  <rect x="150" y="306" width="88" height="48" rx="9" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="194" y="321" font-size="9" fill="#8892a4" text-anchor="middle">TUE</text>
+  <text x="186" y="340" font-size="18">⛅</text><text x="194" y="348" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="middle"> 31°</text>
+  <rect x="248" y="306" width="88" height="48" rx="9" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="292" y="321" font-size="9" fill="#8892a4" text-anchor="middle">WED</text>
+  <text x="284" y="340" font-size="18">🌦</text><text x="292" y="348" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="middle"> 30°</text>
+  <rect x="346" y="306" width="88" height="48" rx="9" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="390" y="321" font-size="9" fill="#8892a4" text-anchor="middle">THU</text>
+  <text x="382" y="340" font-size="18">🌧</text><text x="390" y="348" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="middle"> 28°</text>
+  <rect x="444" y="306" width="88" height="48" rx="9" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/>
+  <text x="488" y="321" font-size="9" fill="#8892a4" text-anchor="middle">FRI</text>
+  <text x="480" y="340" font-size="18">⛅</text><text x="488" y="348" font-size="11" font-weight="700" fill="#e6edf3" text-anchor="middle"> 31°</text>
 </svg>
