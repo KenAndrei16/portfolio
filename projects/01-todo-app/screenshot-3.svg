@@ -1,83 +1,69 @@
-<svg viewBox="0 0 540 580" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',system-ui,sans-serif" preserveAspectRatio="xMidYMid meet">
-  <defs>
-    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0a0f1e"/>
-      <stop offset="100%" stop-color="#1a2236"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Card — same size as ss1 and ss2 -->
-  <rect width="540" height="580" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity=".3" rx="16"/>
-
-  <!-- Header — identical to ss1/ss2 -->
-  <rect x="0" y="0" width="540" height="96" rx="16" fill="url(#hg)"/>
-  <rect x="0" y="80" width="540" height="16" fill="#0a0f1e"/>
-  <text x="28" y="52" font-size="26" font-weight="700" fill="#d4a843">My Tasks</text>
-  <text x="28" y="76" font-size="12" fill="#8892a4">Wednesday, April 16, 2025</text>
-
-  <!-- Stats bar — all done, same layout as ss1/ss2 -->
-  <rect x="0" y="96" width="540" height="60" fill="#3fb950" fill-opacity=".04"/>
-  <rect x="0" y="155" width="540" height="1" fill="#d4a843" fill-opacity=".1"/>
-  <text x="80"  y="122" font-size="22" font-weight="700" fill="#d4a843" text-anchor="middle">5</text>
-  <text x="80"  y="140" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1.5">TOTAL</text>
-  <text x="190" y="122" font-size="22" font-weight="700" fill="#3fb950" text-anchor="middle">5</text>
-  <text x="190" y="140" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1.5">DONE</text>
-  <text x="300" y="122" font-size="22" font-weight="700" fill="#4a5568" text-anchor="middle">0</text>
-  <text x="300" y="140" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1.5">PENDING</text>
-
-  <!-- Input row — same as ss1/ss2 -->
-  <rect x="0" y="156" width="540" height="1" fill="#ffffff" fill-opacity=".06"/>
-  <rect x="28"  y="170" width="374" height="38" rx="8" fill="#0d1117" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
-  <text x="44"  y="193" font-size="12" fill="#4a5568">Add a new task...</text>
-  <rect x="426" y="170" width="86"  height="38" rx="8" fill="#d4a843"/>
-  <text x="469" y="193" font-size="13" font-weight="700" fill="#0a0f1e" text-anchor="middle">Add</text>
-
-  <!-- Filter tabs — DONE active, same spacing as ss1/ss2 -->
-  <rect x="0" y="224" width="540" height="44" fill="#0d1117"/>
-  <text x="50"  y="250" font-size="12" fill="#8892a4" text-anchor="middle">All</text>
-  <text x="122" y="250" font-size="12" fill="#8892a4" text-anchor="middle">Pending</text>
-  <rect x="162" y="234" width="52"  height="24" rx="12" fill="#3fb950" fill-opacity=".12" stroke="#3fb950" stroke-opacity=".5" stroke-width="1"/>
-  <text x="188" y="250" font-size="12" fill="#3fb950" text-anchor="middle">Done</text>
-
-  <!-- Priority filter row — same as ss1/ss2 -->
-  <rect x="0" y="268" width="540" height="38" fill="#0d1117"/>
-  <text x="28"  y="291" font-size="10" fill="#4a5568">PRIORITY:</text>
-  <rect x="92"  y="278" width="34"  height="20" rx="10" fill="#d4a843" fill-opacity=".1" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
-  <text x="109" y="291" font-size="10" fill="#d4a843" text-anchor="middle">All</text>
-  <circle cx="140" cy="288" r="4" fill="#f85149"/>
-  <text x="150" y="291" font-size="10" fill="#8892a4">High</text>
-  <circle cx="188" cy="288" r="4" fill="#d4a843"/>
-  <text x="198" y="291" font-size="10" fill="#8892a4">Medium</text>
-  <circle cx="248" cy="288" r="4" fill="#3fb950"/>
-  <text x="258" y="291" font-size="10" fill="#8892a4">Low</text>
-
-  <!-- Separator -->
-  <line x1="0" y1="306" x2="540" y2="306" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
-
-  <!-- Done tasks — same row height as ss1/ss2 (42px gap) -->
-  <circle cx="46"  cy="334" r="10" fill="#d4a843"/>
-  <polyline points="40,334 44,340 53,326" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="64"  cy="334" r="5"  fill="#f85149"/>
-  <text x="76" y="339" font-size="13" fill="#4a5568" text-decoration="line-through">Submit OJT application</text>
-
-  <circle cx="46"  cy="376" r="10" fill="#d4a843"/>
-  <polyline points="40,376 44,382 53,368" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="64"  cy="376" r="5"  fill="#d4a843"/>
-  <text x="76" y="381" font-size="13" fill="#4a5568" text-decoration="line-through">Finish portfolio website</text>
-
-  <circle cx="46"  cy="418" r="10" fill="#d4a843"/>
-  <polyline points="40,418 44,424 53,410" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="64"  cy="418" r="5"  fill="#3fb950"/>
-  <text x="76" y="423" font-size="13" fill="#4a5568" text-decoration="line-through">Study for finals exam</text>
-
-  <!-- Congrats box — fully inside card with 28px margin -->
-  <rect x="28" y="452" width="484" height="72" rx="12" fill="#3fb950" fill-opacity=".07" stroke="#3fb950" stroke-width="1.5" stroke-opacity=".3"/>
-  <text x="270" y="480" font-size="22" text-anchor="middle">🎉</text>
-  <text x="270" y="506" font-size="14" fill="#3fb950" font-weight="600" text-anchor="middle">All tasks completed! Great work.</text>
-
-  <!-- Bottom bar — same as ss1 -->
-  <rect x="0"   y="546" width="540" height="1"  fill="#ffffff" fill-opacity=".06"/>
-  <rect x="0"   y="547" width="540" height="33" fill="#0d1117" fill-opacity=".5"/>
-  <rect x="390" y="555" width="124" height="20" rx="7" fill="none" stroke="#f85149" stroke-width="1" stroke-opacity=".4"/>
-  <text x="452" y="569" font-size="11" fill="#f85149" text-anchor="middle">Clear Completed</text>
+<svg viewBox="0 0 540 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',system-ui,sans-serif" preserveAspectRatio="xMidYMid meet">
+<defs>
+  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0a0f1e"/>
+    <stop offset="100%" stop-color="#1a2236"/>
+  </linearGradient>
+</defs>
+<rect width="540" height="600" rx="16" fill="#161b22" stroke="#3fb950" stroke-width="1" stroke-opacity=".3"/>
+<rect x="0" y="0" width="540" height="90" rx="16" fill="url(#hg)"/>
+<rect x="0" y="76" width="540" height="14" fill="#0a0f1e"/>
+<text x="270" y="46" font-size="24" font-weight="700" fill="#d4a843" text-anchor="middle">My Tasks</text>
+<text x="270" y="68" font-size="11" fill="#8892a4" text-anchor="middle">Wednesday, April 16, 2025</text>
+<!-- STATS — all done -->
+<rect x="0" y="90" width="540" height="56" fill="#3fb950" fill-opacity=".04"/>
+<rect x="0" y="145" width="540" height="1" fill="#d4a843" fill-opacity=".1"/>
+<text x="90"  y="114" font-size="20" font-weight="700" fill="#d4a843" text-anchor="middle">5</text>
+<text x="90"  y="130" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1">TOTAL</text>
+<text x="270" y="114" font-size="20" font-weight="700" fill="#3fb950" text-anchor="middle">5</text>
+<text x="270" y="130" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1">DONE</text>
+<text x="450" y="114" font-size="20" font-weight="700" fill="#4a5568" text-anchor="middle">0</text>
+<text x="450" y="130" font-size="9"  fill="#8892a4" text-anchor="middle" letter-spacing="1">PENDING</text>
+<rect x="0" y="146" width="540" height="1" fill="#ffffff" fill-opacity=".06"/>
+<rect x="28" y="160" width="374" height="36" rx="8" fill="#0d1117" stroke="#d4a843" stroke-opacity=".2" stroke-width="1"/>
+<text x="44"  y="182" font-size="12" fill="#4a5568">Add a new task...</text>
+<rect x="428" y="160" width="84"  height="36" rx="8" fill="#d4a843"/>
+<text x="470" y="182" font-size="13" font-weight="700" fill="#0a0f1e" text-anchor="middle">Add</text>
+<!-- STATUS FILTER — DONE active -->
+<rect x="0" y="212" width="540" height="1" fill="#ffffff" fill-opacity=".06"/>
+<rect x="0" y="213" width="540" height="40" fill="#0d1117"/>
+<text x="49"  y="237" font-size="12" fill="#8892a4" text-anchor="middle">All</text>
+<text x="120" y="237" font-size="12" fill="#8892a4" text-anchor="middle">Pending</text>
+<rect x="154" y="221" width="52"  height="24" rx="12" fill="#3fb950" fill-opacity=".12" stroke="#3fb950" stroke-opacity=".5" stroke-width="1"/>
+<text x="180" y="237" font-size="12" fill="#3fb950" text-anchor="middle">Done</text>
+<!-- PRIORITY FILTER -->
+<rect x="0" y="253" width="540" height="1" fill="#ffffff" fill-opacity=".04"/>
+<rect x="0" y="254" width="540" height="36" fill="#0d1117"/>
+<text x="28"  y="277" font-size="9" fill="#4a5568" letter-spacing="1">PRIORITY:</text>
+<rect x="90"  y="264" width="32" height="18" rx="9" fill="#d4a843" fill-opacity=".1" stroke="#d4a843" stroke-opacity=".3" stroke-width="1"/>
+<text x="106" y="277" font-size="9" fill="#d4a843" text-anchor="middle">All</text>
+<circle cx="136" cy="273" r="4" fill="#f85149"/>
+<text x="145" y="277" font-size="9" fill="#8892a4">High</text>
+<circle cx="181" cy="273" r="4" fill="#d4a843"/>
+<text x="190" y="277" font-size="9" fill="#8892a4">Medium</text>
+<circle cx="238" cy="273" r="4" fill="#3fb950"/>
+<text x="247" y="277" font-size="9" fill="#8892a4">Low</text>
+<rect x="0" y="290" width="540" height="1" fill="#ffffff" fill-opacity=".05"/>
+<!-- DONE TASKS -->
+<circle cx="46" cy="322" r="10" fill="#d4a843"/>
+<polyline points="40,322 44,328 53,314" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64" cy="322" r="5" fill="#f85149"/>
+<text x="76" y="327" font-size="13" fill="#4a5568" text-decoration="line-through">Submit OJT application</text>
+<circle cx="46" cy="362" r="10" fill="#d4a843"/>
+<polyline points="40,362 44,368 53,354" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64" cy="362" r="5" fill="#d4a843"/>
+<text x="76" y="367" font-size="13" fill="#4a5568" text-decoration="line-through">Finish portfolio website</text>
+<circle cx="46" cy="402" r="10" fill="#d4a843"/>
+<polyline points="40,402 44,408 53,394" fill="none" stroke="#0a0f1e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="64" cy="402" r="5" fill="#3fb950"/>
+<text x="76" y="407" font-size="13" fill="#4a5568" text-decoration="line-through">Study for finals exam</text>
+<!-- CONGRATS BOX — same y as "just added" row in ss1 -->
+<rect x="28" y="432" width="484" height="72" rx="12" fill="#3fb950" fill-opacity=".07" stroke="#3fb950" stroke-width="1.5" stroke-opacity=".3"/>
+<text x="270" y="460" font-size="22" text-anchor="middle">🎉</text>
+<text x="270" y="488" font-size="14" fill="#3fb950" font-weight="600" text-anchor="middle">All tasks completed! Great work.</text>
+<!-- BOTTOM BAR -->
+<rect x="0" y="546" width="540" height="1" fill="#ffffff" fill-opacity=".06"/>
+<rect x="0" y="547" width="540" height="53" fill="#0d1117" fill-opacity=".5"/>
+<rect x="392" y="558" width="120" height="22" rx="7" fill="none" stroke="#f85149" stroke-width="1" stroke-opacity=".4"/>
+<text x="452" y="573" font-size="11" fill="#f85149" text-anchor="middle">Clear Completed</text>
 </svg>
